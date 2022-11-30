@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Кэт энерджи</title>
 </head>
 
-<body class="page__body">
+<body>
   <header class="main-header">
     <a class="logo" href="#">
       <img class="logo__image" src="img/logo-mobile.svg" width="33" height="38"
@@ -39,89 +39,105 @@
     </nav>
   </header>
   <main class="main-container">
-    <h1 class="visually-hidden">Кэт энерджи.</h1>
-    <section class="hero-section">
-      <div class="hero-section__wrapper">
-        <h2 class="hero-section__header">Функциональное питание для котов</h2>
-        <p class="hero-section__slogan">Занялся собой? Займись котом!</p>
-        <a class="hero-section__choosing-of-program button" href="form.html">Подобрать программу</a>
-        <img class="hero-section__image" src="img/main-product.png" width="280" height="270"
-          alt="Баночка с питанием для котов.">
-      </div>
-    </section>
-
-    <section class="programs-section">
-      <div class="programs-section__wrappers">
-        <h2 class=" visually-hidden">Выбор программы.</h2>
-        <ul class="programs-section__list">
-          <li class="programs-section__item programs-section__item--energy-slim">
-            <h3 class="programs-section__header">Похудение</h3>
-            <p class="programs-section__description">Ваш кот весит больше собаки и почти утратил способность лазить по
-              деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="programs-section__catalog button" href="#">Каталог slim</a>
+    <h1 class="main-container__header">Форма для подбора программы</h1>
+    <p class="main-container__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+    <form class="main-container__form form" action="https://echo.htmlacademy.ru/" method="get">
+      <fieldset class="form__part">
+        <legend class="visually-hidden">Данные котечки.</legend>
+        <label> Имя:*
+          <input class="form-input" type="text" name="name" placeholder="барсик">
+        </label>
+        <label> Вес (кг):*
+          <input class="form-input" type="number" name="weight" max="30" placeholder="7">
+        </label>
+        <label> Возраст (лет):
+          <input class="form-input" type="number" name="age" max="40" placeholder="7">
+        </label>
+      </fieldset>
+      <fieldset class="form__part goal">
+        <legend class="visually-hidden">Цель приобретения продукта.</legend>
+        <ul class="goal__list">
+          <li class="goal__item">
+            <label class="goal__label">
+              <input class="goal__input" type="radio" name="main-goal" value="weight-loss" checked>
+              <span class="goal__mark"></span>
+              <span class="goal__label">Похудение</span>
+            </label>
           </li>
-
-          <li class="programs-section__item programs-section__item--energy-pro">
-            <h3 class="programs-section__header">Набор массы</h3>
-            <p class="programs-section__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat
-              Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="programs-section__catalog button" href="#">Каталог pro</a>
+          <li class="goal__item">
+            <label class="goal__label">
+              <input class="goal__input" type="radio" name="main-goal" value="weight-gain" checked>
+              <span class="goal__mark"></span>
+              <span class="goal__label">Набор массы</span>
+            </label>
           </li>
-        </ul>
-      </div>
-    </section>
-    <section class="instruction">
-      <div class="instruction__wrapper">
-        <h2 class="instruction__header">Как это работает</h2>
-        <ul class="instruction__list">
-          <li class="instruction__item instruction__item--healthy">
-            <p class="instruction__text">Функциональное питание содержит только полезные питательные вещества.</p>
-          </li>
-
-          <li class="instruction__item instruction__item--powder">
-            <p class="instruction__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
-          </li>
-
-          <li class="instruction__item instruction__item--replace-meals">
-            <p class="instruction__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
-          </li>
-
-          <li class="instruction__item instruction__item--period">
-            <p class="instruction__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+          <li class="goal__item">
+            <label class="goal__label">
+              <input class="goal__input" type="radio" name="main-goal" value="uncertainty" checked>
+              <span class="goal__mark"></span>
+              <span class="goal__label">Не знаю (нужен ваш совет)</span>
+            </label>
           </li>
         </ul>
-      </div>
-    </section>
+      </fieldset>
+      <fieldset class="form__part owner-contacts">
+        <legend class="owner-contacts__title">Контактные данные (владельца кота)</legend>
+        <div class="owner-contacts__wrapper">
+          <label class="owner-contacts__label"> E-mail:*
+            <input class="form-input form-input--email" type="email" name="email" placeholder="kuklachev@gmail.com">
+          </label>
+        </div>
+        <div class="owner-contacts__wrapper">
+          <label class="owner-contacts__label"> Телефон:*
+            <input class="form-input form-input--phone" type="tel" name="phone" placeholder="8 (960) 900-60-90">
+          </label>
+        </div>
+      </fieldset>
 
-    <section class="alive-example">
-      <div class="alive-example__wrapper">
-        <h2 class="alive-example__header">Живой пример</h2>
-        <p class="alive-example__text">
-          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
-          изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-        </p>
-        <div class="alive-example__weight">
-          <span>5 КГ</span>
-          <span>Снижение веса</span>
-        </div>
-        <div class="alive-example__period">
-          <span>60 ДНЕЙ</span>
-          <span>Затрачено времени</span>
-        </div>
-        <div class="alive-example__price">
-          <span>Затраты на питание:</span>
-          <span>15 000 РУБ. </span>
-        </div>
-        <div class="alive-example__range">
-          <span class="alive-example__range-strip"></span>
-          <button class="alive-example__button" type="button">
-            <span class="visually-hidden">Кнопка изменений.</span>
-          </button>
-          <img class="alive-example__image" src="img/cat-before.png" width="280" height="256" alt="Полная кошка.">
-          <img class="alive-example__image" src="img/cat-after.png" width="280" height="256" alt="Худая кошка.">
-        </div>
-      </div>
-    </section>
+      <fieldset class="form__part comment">
+        <legend class="comment__title">Комментарий</legend>
+        <textarea name="comment" rows="12" cols="40" placeholder="Расскажите обо всех повадках кота"></textarea>
+      </fieldset>
+
+      <fieldset class="form__part add">
+        <legend class="add__title">Дополнительно</legend>
+        <ul class="add__list">
+          <li class="add__item">
+            <label class="add__control">
+              <input class="visually-hidden" type="checkbox" name="sweetener" checked>
+              <span class="add__mark"></span>
+              <span class="add__label">Сахарозаменитель</span>
+            </label>
+          </li>
+
+          <li class="add__item">
+            <label class="add__control">
+              <input class="visually-hidden" type="checkbox" name="water">
+              <span class="add__mark"></span>
+              <span class="add__label">Питьевая вода</span>
+            </label>
+          </li>
+
+          <li class="add__item">
+            <label class="add__control">
+              <input class="visually-hidden" type="checkbox" name="milk">
+              <span class="add__mark"></span>
+              <span class="add__label">Молоко</span>
+            </label>
+          </li>
+
+          <li class="add__item">
+            <label class="add__control">
+              <input class="visually-hidden" type="checkbox" name="vitamins">
+              <span class="add__mark"></span>
+              <span class="add__label">Витамины</span>
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <button type="submit">Отправить заявку</button>
+    </form>
 
     <section class="contact-information">
       <div class="contact-information__wrapper">
@@ -143,8 +159,8 @@
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link" href="#">
-              <svg width="27" height="17" viewBox="0 0 27 17" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
-                aria-label="Логотип «Вконтакте».">
+              <svg width="27" height="17" viewBox="0 0 27 17" fill="none" role="img" aria-label="Логотип «Вконтакте»."
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M0 2.339C0 1.484.515 1.023 1.545.956l3.97.025a.52.52 0 0 1 .533.377c.409 1.257.866 2.343 1.372 3.257.506.913 1.168 1.965 1.985 3.156.071.15.187.226.346.226.125 0 .222-.059.293-.176l.08-.277.027-4.35c0-.302-.075-.503-.226-.604-.151-.1-.431-.176-.84-.226-.32-.05-.48-.235-.48-.553 0-.067.01-.118.027-.151C9.005.57 10.072.025 11.83.025L13.322 0c.675 0 1.234.16 1.678.478.444.318.666.821.666 1.509v5.708c.125.084.24.126.347.126.266 0 .497-.15.692-.453 1.954-2.582 3.011-4.308 3.17-5.18 0-.017.019-.059.054-.126.125-.251.329-.47.613-.654.284-.184.533-.31.746-.377a.554.554 0 0 1 .24-.05h4.13l.266.025c.355 0 .63.16.826.478.07.1.12.21.146.327.027.117.045.234.054.352.009.117.013.184.013.2v.177c-.124.687-.44 1.42-.946 2.2-.506.78-1.15 1.622-1.931 2.528-.782.905-1.27 1.5-1.466 1.785-.16.201-.24.386-.24.554 0 .134.071.285.213.452l3.89 4.627c.213.269.32.562.32.88 0 .386-.16.705-.48.956-.32.252-.701.394-1.145.428l-.453.025h-4.05a.855.855 0 0 0-.106.012.862.862 0 0 1-.107.013c-.39 0-.755-.16-1.092-.478-.125-.134-.96-1.123-2.505-2.967a1.387 1.387 0 0 0-.373-.327c-.07.268-.164.654-.28 1.157-.115.503-.2.863-.253 1.081l-.08.428c-.177.586-.55.938-1.119 1.056l-.373.025h-2.61c-1.475 0-2.945-.637-4.41-1.911-1.466-1.275-2.784-2.922-3.957-4.942C2.238 8.102 1.146 5.75.133 3.068A1.916 1.916 0 0 1 0 2.338Zm16.013 6.513c-.373 0-.71-.096-1.013-.29-.302-.192-.453-.456-.453-.791V1.987c0-.336-.089-.575-.266-.717-.178-.143-.489-.214-.933-.214l-1.518.05c-.764 0-1.341.126-1.732.378.781.352 1.172.922 1.172 1.71V7.62a1.5 1.5 0 0 1-.533 1.043 1.59 1.59 0 0 1-1.066.415c-.532 0-.94-.243-1.225-.729C7.06 6.371 6.03 4.493 5.356 2.716l-.24-.654-3.544-.025c-.231 0-.36.013-.386.038-.027.025-.04.096-.04.213 0 .151.017.31.053.478l.56 1.409c1.491 3.638 3.112 6.505 4.862 8.6 1.75 2.096 3.468 3.144 5.155 3.144h2.665c.106 0 .186-.03.24-.088.053-.06.097-.172.133-.34l.053-.251.506-2.213c.142-.302.267-.503.373-.604a.975.975 0 0 1 .693-.277c.426 0 .861.243 1.305.73l2.265 2.716c.142.218.293.327.453.327h4.396c.533 0 .8-.126.8-.378a.466.466 0 0 0-.08-.251l-3.864-4.552c-.302-.352-.453-.73-.453-1.131 0-.403.142-.788.427-1.157.23-.336.679-.893 1.345-1.673a37.63 37.63 0 0 0 1.745-2.188c.498-.679.826-1.295.986-1.848l.08-.327a.371.371 0 0 1-.027-.163.574.574 0 0 0-.026-.189h-4.183c-.267.1-.48.252-.64.453l-.16.478c-.444 1.156-1.607 2.942-3.49 5.356a1.892 1.892 0 0 1-1.305.503Z"
                   fill="#666" />
@@ -152,10 +168,11 @@
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
+
           <li class="social__item">
             <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
-              <svg width="24" height="19" viewBox="0 0 24 19" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
-                aria-label="Логотип «YouTube».">
+              <svg width="24" height="19" viewBox="0 0 24 19" fill="none" role="img" aria-label="Логотип «YouTube»."
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="m15.85 8.793-5.236-3.491a.655.655 0 0 0-1.014.545v6.982a.655.655 0 0 0 1.014.546l5.237-3.491a.654.654 0 0 0 0-1.091Zm-4.94 2.814V7.07l3.403 2.27-3.404 2.268Zm12.48-8.563a2.4 2.4 0 0 0-1.452-1.637C18.218-.022 12.251 0 12 0c-.25 0-6.218-.022-9.938 1.407A2.4 2.4 0 0 0 .61 3.044C.327 4.113 0 6.076 0 9.338c0 3.262.327 5.226.61 6.295a2.4 2.4 0 0 0 1.452 1.636c3.72 1.43 9.687 1.407 9.938 1.407h.076c.753 0 6.317-.043 9.862-1.407a2.4 2.4 0 0 0 1.451-1.636c.284-1.07.611-3.033.611-6.295s-.327-5.225-.61-6.294Zm-1.266 12.261a1.09 1.09 0 0 1-.655.742c-3.49 1.342-9.404 1.32-9.469 1.32-.066 0-5.978.022-9.47-1.32a1.09 1.09 0 0 1-.654-.742c-.261-1.003-.567-2.847-.567-5.967 0-3.12.306-4.963.567-5.967a1.09 1.09 0 0 1 .655-.742C6.02 1.287 11.934 1.31 12 1.31c.066 0 5.978-.022 9.47 1.32a1.092 1.092 0 0 1 .654.742c.262 1.004.567 2.847.567 5.967 0 3.12-.305 4.964-.567 5.968Z"
                   fill="#666" />
@@ -163,10 +180,11 @@
               <span class="visually-hidden">Ютуб</span>
             </a>
           </li>
+
           <li class="social__item">
             <a class="social__link" href="#">
-              <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
-                aria-label="Логотип «Телеграм».">
+              <svg width="20" height="18" viewBox="0 0 20 18" fill="none" role="img" aria-label="Логотип «Телеграм»."
+                xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M19.46.153c.18.15.265.382.227.611l-2.626 15.757a.657.657 0 0 1-1.012.439l-7.878-5.253a.656.656 0 0 1-.149-.956l2.611-3.263-4.36 2.906a.657.657 0 0 1-.658.041L.363 7.81a.657.657 0 0 1 .073-1.205L18.819.038a.657.657 0 0 1 .642.115ZM2.327 7.323 5.862 9.09l7.561-5.04a.656.656 0 0 1 .877.956l-4.805 6.006 6.438 4.292L18.208 1.65 2.326 7.323Z"
                   fill="#666" />
