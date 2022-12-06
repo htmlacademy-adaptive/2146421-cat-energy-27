@@ -47,16 +47,17 @@
         <legend class="visually-hidden">Данные котечки.</legend>
         <div class="form__input-design">
           <label class="form__label" for="form__name"> Имя:*</label>
-          <input class="form__input input-name" id="form__name" type="text" name="name" placeholder="барсик">
+          <input class="form__input form__input--input-name" id="form__name" type="text" name="name" placeholder="барсик">
         </div>
         <div class="form__input-design">
-        <label class="form__label" for="form__weight"> Вес (кг):*</label>
-          <input class="form__input input-weight" id="form__weight" type="number" name="weight" max="30" placeholder="7">
-      </div>
+          <label class="form__label" for="form__weight"> Вес (кг):*</label>
+          <input class="form__input form__input--input-weight" id="form__weight" type="number" name="weight" max="30"
+            placeholder="7">
+        </div>
         <div class="form__input-design">
-        <label class="form__label" for="form__age"> Возраст (лет):</label>
-          <input class="form__input input-age" id="form__age" type="number" name="age" max="40" placeholder="7">
-      </div>
+          <label class="form__label" for="form__age"> Возраст (лет):</label>
+          <input class="form__input form__input--input-age" id="form__age" type="number" name="age" max="40" placeholder="7">
+        </div>
       </fieldset>
       <fieldset class="form__part goal">
         <legend class="visually-hidden">Цель приобретения продукта.</legend>
@@ -88,17 +89,19 @@
         <legend class="owner-contacts__title">Контактные данные (владельца кота)</legend>
         <div class="owner-contacts__wrapper">
           <label class="owner-contacts__label" for="owner-contacts__email"> E-mail:*</label>
-            <input class="form__input input-email" id="owner-contacts__email" type="email" name="email" placeholder="kuklachev@gmail.com">
+          <input class="form__input form__input--input-email" id="owner-contacts__email" type="email" name="email"
+            placeholder="kuklachev@gmail.com">
         </div>
         <div class="owner-contacts__wrapper">
           <label class="owner-contacts__label" for="owner-contacts__tel"> Телефон:* </label>
-            <input class="form__input input-phone" id="input-tel" type="tel" name="phone" placeholder="8 (960) 900-60-90">
+          <input class="form__input form__input--input-phone" id="input-tel" type="tel" name="phone" placeholder="8 (960) 900-60-90">
         </div>
       </fieldset>
 
       <fieldset class="form__part comment">
         <legend class="comment__title">Комментарий</legend>
-        <textarea class="form__input-comment" name="comment" rows="7" cols="40" placeholder="Расскажите обо всех повадках кота"></textarea>
+        <textarea class="form__input-comment" name="comment" rows="7" cols="40"
+          placeholder="Расскажите обо всех повадках кота"></textarea>
       </fieldset>
 
       <fieldset class="form__part add">
