@@ -1,8 +1,29 @@
+.gift {
+  @media (min-width: @desktop-width) {
+    width: 245px;
+  }
+}
+
 .gift__wrapper {
   margin-right: 20px;
   margin-left: 20px;
   margin-bottom: 35px;
   background-image: url("../img/cat-background-catalog.png");
+
+  @media (min-width: @tablet-width) {
+    margin-top: 69px;
+    margin-bottom: 76px;
+    margin-right: 30px;
+    margin-left: 30px;
+    background-repeat: no-repeat;
+    background-size: 707px auto;
+    background-position: center 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    margin-left: 0;
+  }
 }
 
 .gift__text {
@@ -17,4 +38,19 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 71px 124px 69px 422px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin-top: 191px;
+    padding-top: 184px;
+    padding-bottom: 50px;
+    width: 161px;
+    padding-left: 41px;
+    padding-right: 45px;
+  }
 }

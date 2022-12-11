@@ -1,6 +1,13 @@
 .logo {
   display: flex;
   text-decoration: none;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    justify-content: space-between;
+    align-items: center;
+    width: 174px;
+    margin-right: 94px;
+  }
 }
 
 .logo__text {
@@ -8,9 +15,19 @@
   margin-left: 57px;
   margin-right: 65px;
   padding-bottom: 7px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+  }
 }
 
 .logo__image {
   margin-left: 20px;
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }

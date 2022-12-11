@@ -6,17 +6,41 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
 }
 
 .features-list__item {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    width: 250px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid @middle-grey;
+    padding-top: 7px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 169px;
+  }
 }
 
 .features-list__term {
   display: inline-block;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    align-items: stretch;
+  }
 }
 
 .features-list__description {
   display: inline-block;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+  }
 }

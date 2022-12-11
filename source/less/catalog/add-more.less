@@ -1,10 +1,18 @@
 .add-more {
-  padding: 25px 20px;
+  @media (min-width: @desktop-width) {
+    width: 245px;
+  }
+}
+
+.add-more__wrapper {
+  @media (min-width: @tablet-width) {
+    border: 1px solid @grey;
+  }
 }
 
 .add-more__title {
   margin: 0;
-  margin-top: 53px;
+  margin-top: 78px;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -13,6 +21,14 @@
   text-align: center;
   text-transform: uppercase;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    width: 134px;
+    margin: 0 auto;
+    margin-top: 161px;
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
 
 .add-more__text {
@@ -24,6 +40,14 @@
   line-height: 16px;
   text-align: center;
   color: @dark-grey;
+
+  @media (min-width: @tablet-width) {
+    width: 165px;
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0 auto;
+    margin-top: 23px;
+  }
 }
 
 .add-more__button {
@@ -36,4 +60,15 @@
   color: @dark-grey;
   width: 280px;
   margin-top: 21px;
+
+  @media (min-width: @tablet-width) {
+    width: 252px;
+    margin: 0 auto;
+    margin-top: 87px;
+    margin-bottom: 39px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 168px;
+  }
 }
