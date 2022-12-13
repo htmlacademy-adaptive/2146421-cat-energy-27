@@ -13,7 +13,7 @@
 .hero-section__design {
   background-color: @green;
   opacity: 0.85;
-  width: 320px;
+  width: auto;
   min-height: 302px;
 
   @media (min-width: @tablet-width) {
@@ -36,6 +36,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
+  text-align: center;
   text-transform: uppercase;
   padding-left: 60px;
   padding-right: 60px;
@@ -59,6 +60,7 @@
 }
 
 .hero-section__header {
+  position: relative;
   margin: 0;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -122,7 +124,7 @@
 }
 
 .hero-section__image {
-  z-index: 2;
+  z-index: 3;
   position: absolute;
   top: 167px;
   padding-left: 20px;

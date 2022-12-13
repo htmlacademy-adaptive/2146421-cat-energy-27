@@ -5,28 +5,18 @@
   .paddings();
 
   @media (min-width: @tablet-width) {
+    .paddings-tablet();
     display: grid;
-    grid-template-columns: 324px 324px;
+    grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
     column-gap: 60px;
     row-gap: 141px;
-    padding-left: 0;
-    padding-right: 0;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 245px 245px 245px 245px;
+    .paddings-desktop();
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
     column-gap: 80px;
     row-gap: 143px;
-  }
-}
-
-.catalog__wrapper-tablet {
-  @media (min-width: @tablet-width) and (max-width: 1439px) {
-    .paddings-tablet();
-    display: grid;
-    grid-template-columns: 324px 324px;
-    column-gap: 60px;
-    row-gap: 60px;
   }
 
   @media (min-width: @desktop-width) {
@@ -52,7 +42,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 245px;
+    min-width: 245px;
     box-sizing: border-box;
   }
 }

@@ -164,16 +164,16 @@
     z-index: 4;
     left: 100px;
     bottom: 320px;
+  }
 
-    @media (min-width: @desktop-width) {
-      left: 800px;
-    }
+  @media (min-width: @desktop-width) {
+    left: 800px;
   }
 }
 
 .alive-example__background {
   @media (min-width: @tablet-width) {
-    width: 768px;
+    min-width: 768px;
     height: 462px;
     background-color: @grey;
     padding-left: 0;

@@ -17,10 +17,10 @@
 .contact-information__wrapper {
   padding: 26px 20px;
   display: flex;
+  justify-content: space-between;
 
   @media (min-width: @tablet-width) {
     padding: 60px 70px 56px 70px;
-    justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
@@ -73,7 +73,7 @@
 }
 
 .contact-information__map {
-  width: 320px;
+  min-width: 320px;
   height: 362px;
 
   @media (min-width: @tablet-width) {
