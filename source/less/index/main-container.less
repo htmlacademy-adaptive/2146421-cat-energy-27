@@ -1,7 +1,8 @@
 .main-container__hero-wrapper {
   @media (min-width: @desktop-width) {
     display: flex;
-    justify-content: space-between;
+    margin: 0 auto;
+    width: 1440px;
   }
 
   &::before {
@@ -12,7 +13,7 @@
       height: 694px;
       background-image: url("../img/index-background-desktop-2.jpg");
       background-repeat: no-repeat;
-      left: 920px;
+      left: 50%;
       background-size: 720px auto;
     }
   }
@@ -25,9 +26,8 @@
       content: "";
       min-height: 694px;
       background-color: @green;
-      background-position: center;
+      left: 50%;
       opacity: 0.85;
-      left: 720px;
     }
   }
 }

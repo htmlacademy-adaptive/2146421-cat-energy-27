@@ -52,6 +52,7 @@
 
   @media (min-width: @desktop-width) {
     box-sizing: border-box;
+    text-align: start;
     width: 414px;
     margin: 0;
     padding-bottom: 52px;
@@ -124,10 +125,9 @@
 }
 
 .hero-section__image {
-  z-index: 3;
+  z-index: 2;
   position: absolute;
   top: 167px;
-  padding-left: 20px;
 
   @media (min-width: @tablet-width) {
     box-sizing: border-box;
@@ -140,5 +140,15 @@
   @media (min-width: @desktop-width) {
     top: 141px;
     left: 558px;
+  }
+}
+
+.hero-section__design-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    display: block;
   }
 }

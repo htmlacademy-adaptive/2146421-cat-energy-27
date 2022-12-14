@@ -9,6 +9,7 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 0;
+    .paddings-desktop();
   }
 }
 
@@ -18,11 +19,11 @@
   list-style-type: none;
 
   @media (min-width: @desktop-width) {
+    width: 1220px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
     margin-top: 82px;
-    margin-left: 80px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(570px, 1fr));
-    column-gap: 80px;
   }
 }
 
@@ -33,6 +34,7 @@
     margin-bottom: 20px;
 
     @media (min-width: @desktop-width) {
+      width: 570px;
       margin-bottom: 0;
     }
   }
