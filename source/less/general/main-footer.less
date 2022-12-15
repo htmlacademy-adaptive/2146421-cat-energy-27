@@ -1,9 +1,8 @@
 .main-footer {
-  background-color: #f2f2f2;
+  background-color: @light-grey;
 
   @media (min-width: @desktop-width) {
-    width: 1440px;
-    margin: 0 auto;
+    width: 100%;
   }
 }
 
@@ -31,6 +30,12 @@
     padding: 30px 58px 30px 55px;
     display: flex;
     justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    box-sizing: border-box;
+    width: 1440px;
+    margin: 0 auto;
   }
 }
 
