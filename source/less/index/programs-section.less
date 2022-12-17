@@ -1,12 +1,30 @@
 .programs-section__wrappers {
   padding-top: 20px;
   .paddings();
+
+  @media (min-width: @tablet-width) {
+    .paddings-tablet();
+    padding-top: 430px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+    .paddings-desktop();
+  }
 }
 
 .programs-section__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 82px;
+  }
 }
 
 .programs-section__item {
@@ -14,6 +32,11 @@
 
   &:not(:last-child) {
     margin-bottom: 20px;
+
+    @media (min-width: @desktop-width) {
+      width: 570px;
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -29,6 +52,18 @@
   line-height: 37px;
   text-transform: uppercase;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 77px;
+    margin-left: 53px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 73px;
+    padding-left: 161px;
+  }
 }
 
 .programs-section__description {
@@ -45,6 +80,26 @@
   padding-top: 30px;
   border-bottom: 1px solid @grey-border;
   white-space: normal;
+
+  @media (min-width: @tablet-width) {
+    width: 340px;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 0;
+    padding-left: 53px;
+    padding-top: 24px;
+    padding-bottom: 48px;
+    border-bottom: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 451px;
+    margin-left: 52px;
+    margin-right: 61px;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 23px;
+  }
 }
 
 .programs-section__catalog {
@@ -61,4 +116,16 @@
   color: @black;
   text-align: left;
   background-color: @light-grey;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 52px;
+    padding: 0;
+    font-size: 20px;
+    line-height: 30px;
+    padding-bottom: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 59px;
+  }
 }

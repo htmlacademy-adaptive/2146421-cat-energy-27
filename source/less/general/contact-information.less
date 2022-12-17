@@ -1,12 +1,41 @@
 .contact-information {
   position: relative;
-  background-color: #f2f2f2;
+  background-color: @light-grey;
   margin-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
+
+  &--catalog-background {
+    @media (min-width: @tablet-width) {
+      background-color: @grey;
+    }
+  }
 }
 
 .contact-information__wrapper {
   padding: 26px 20px;
   display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    padding: 60px 70px 56px 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    z-index: 2;
+    background-color: @white;
+    top: 10px;
+    left: 10px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 }
 
 .contact-information__slogan {
@@ -19,6 +48,13 @@
   line-height: 20px;
   text-transform: uppercase;
   color: rgba(17, 17, 17, 1);
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+    width: 172px;
+    margin: 0;
+  }
 }
 
 .contact-information__address {
@@ -28,10 +64,35 @@
   font-size: 14px;
   line-height: 20px;
   color: #444444;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 20px;
+    width: 160px;
+    margin: 0;
+  }
 }
+
 
 .contact-information__pin {
   position: absolute;
   bottom: 175px;
   right: 130px;
+}
+
+.contact-information iframe {
+  width: 100%;
+  display: block;
+  border: none;
+
+  @media (max-width: @mobile-width-only) {
+    height: 362px;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 400px;
+  }
 }

@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,16 +12,16 @@
   <header class="main-header">
     <a class="logo" href="#">
       <img class="logo__image" src="img/logo-mobile.svg" width="33" height="38"
-        alt="Мультяшный кот в костюме супергероя.">
+          alt="Мультяшный кот в костюме супергероя.">
       <img class="logo__text" src="img/footer-logo.svg" width="101" height="18" alt="Cat-energy.">
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню.</span>
       </button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--current">
+          <li class="site-list__item">
             <a class="site-list__link" href="#">
               Главная
             </a>
@@ -41,15 +42,19 @@
   </header>
   <main class="main-container">
     <h1 class="visually-hidden">Кэт энерджи.</h1>
-    <section class="hero-section">
-      <div class="hero-section__design">
-        <h2 class="hero-section__header">Функциональное питание для котов</h2>
-        <p class="hero-section__slogan">Занялся собой? Займись котом!</p>
-      </div>
-      <a class="hero-section__choosing-of-program button" href="form.html">Подобрать программу</a>
-      <img class="hero-section__image" src="img/main-product.png" width="280" height="270"
-        alt="Баночка с питанием для котов.">
-    </section>
+    <div class="main-container__hero-wrapper">
+      <section class="hero-section">
+        <div class="hero-section__design">
+          <h2 class="hero-section__header">Функциональное питание для котов</h2>
+          <p class="hero-section__slogan">Занялся собой? Займись котом!</p>
+        </div>
+        <div class="hero-section__design-wrapper">
+          <a class="hero-section__choosing-of-program button" href="form.html">Подобрать программу</a>
+          <img class="hero-section__image" src="img/main-product.png" width="280" height="270"
+            alt="Баночка с питанием для котов.">
+        </div>
+      </section>
+    </div>
 
     <section class="programs-section">
       <div class="programs-section__wrappers">
@@ -97,29 +102,36 @@
     <section class="alive-example">
       <div class="alive-example__wrapper">
         <h2 class="alive-example__header">Живой пример</h2>
-        <p class="alive-example__text">
-          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
-          изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-        </p>
-        <div class="alive-example__design-wrapper">
-          <div class="alive-example__weight">
-            <span class="alive-example__count">5 КГ</span>
-            <p class="alive-example__count-title">Снижение веса</p>
-          </div>
-          <div class="alive-example__period">
-            <span class="alive-example__count">60 ДНЕЙ</span>
-            <p class="alive-example__count-title">Затрачено времени</p>
+        <div class="alive-example__background-wrapper">
+          <div class="alive-example__content-wrapper">
+            <p class="alive-example__text">
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
+              изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+            </p>
+            <div class="alive-example__tablet-wrapper">
+              <div class="alive-example__design-wrapper">
+                <div class="alive-example__weight">
+                  <span class="alive-example__count">5 КГ</span>
+                  <p class="alive-example__count-title">Снижение веса</p>
+                </div>
+                <div class="alive-example__period">
+                  <span class="alive-example__count">60 ДНЕЙ</span>
+                  <p class="alive-example__count-title">Затрачено времени</p>
+                </div>
+              </div>
+              <p class="alive-example__price">Затраты на питание: <span>15 000 РУБ.</span></p>
+            </div>
           </div>
         </div>
-        <p class="alive-example__price">Затраты на питание: 15 000 РУБ.</p>
-        <div class="alive-example__range">
-          <span class="alive-example__range-strip"></span>
-          <button class="alive-example__button" type="button">
-            <span class="visually-hidden">Кнопка изменений.</span>
-          </button>
-          <img class="alive-example__image" src="img/cat-before.png" width="280" height="256" alt="Полная кошка.">
-          <img class="alive-example__image" src="img/cat-after.png" width="280" height="256" alt="Худая кошка.">
-        </div>
+      </div>
+      <div class="alive-example__background"></div>
+      <div class="alive-example__range">
+        <span class="alive-example__range-strip"></span>
+        <button class="alive-example__button" type="button">
+          <span class="visually-hidden">Кнопка изменений.</span>
+        </button>
+        <img class="alive-example__image" src="img/cat-before.png" width="280" height="256" alt="Полная кошка.">
+        <img class="alive-example__image" src="img/cat-after.png" width="280" height="256" alt="Худая кошка.">
       </div>
     </section>
 
@@ -127,10 +139,15 @@
       <div class="contact-information__wrapper">
         <h2 class="visually-hidden">Контактная информация.</h2>
         <p class="contact-information__slogan">Приглашаем к сотрудничеству дилеров!</p>
-        <p class="contact-information__address">Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="contact-information__address">
+          <span>Ул. Большая Конюшенная, д. 19/8</span>
+          <span>Санкт-Петербург</span>
+          </div>
       </div>
-      <img class="contact-information__map" src="img/map.png" width="320" height="362"
-        alt="Улица Большая Конюшенная, дом 19/8 Санкт-Петербург.">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
+        allowfullscreen
+        title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"></iframe>
       <img class="contact-information__pin" src="img/map-pin.png" width="57" height="53" alt="Точка на карте.">
     </section>
   </main>
@@ -197,6 +214,7 @@
       </div>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>

@@ -8,6 +8,17 @@
   line-height: 26px;
   color: @black;
   padding-bottom: 34px;
+  text-transform: capitalize;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding-bottom: 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 62px;
+  }
 }
 
 .add__list {
@@ -15,6 +26,20 @@
   margin: 0;
   list-style-type: none;
   margin-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 282px 282px;
+    row-gap: 42px;
+    column-gap: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 305px);
+    margin-right: 110px;
+    gap: 0;
+    margin-bottom: 41px;
+  }
 }
 
 .add__item {
@@ -23,7 +48,16 @@
   padding-left: 46px;
   color: @black;
 
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   &:not(:last-child) {
     margin-bottom: 13px;
+
+    @media (min-width: @tablet-width) {
+      margin: 0;
+    }
   }
 }

@@ -11,18 +11,38 @@
   text-transform: uppercase;
   color: @dark-grey;
   padding-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 71px;
+    padding-right: 67px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    .paddings-desktop();
+  }
+}
+
+.form__part-wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    padding-bottom: 69px;
+  }
 }
 
 .form__label {
-  display: inline-block;
+  display: block;
+  white-space: nowrap;
 }
 
 .form__input {
-  display: block;
+  display: flex;
+  flex-grow: 1;
   box-sizing: border-box;
   padding-top: 14px;
   padding-left: 20px;
   padding-bottom: 13px;
+  margin-left: 20px;
   border: 1px solid #e7e7e7;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -33,24 +53,71 @@
   text-transform: uppercase;
   color: #444444;
 
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   &--input-name {
     width: 228px;
+
+    @media (min-width: @tablet-width) {
+      width: 570px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 509px;
+    }
   }
 
   &--input-weight {
     width: 207px;
+
+    @media (min-width: @tablet-width) {
+      width: 542px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 481px;
+    }
   }
 
   &--input-age {
     width: 173px;
+
+    @media (min-width: @tablet-width) {
+      width: 500px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 439px;
+    }
   }
 
   &--input-phone {
     width: 202px;
+
+    @media (min-width: @tablet-width) {
+      width: 529px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 467px;
+    }
   }
 
   &--input-email {
     width: 220px;
+
+    @media (min-width: @tablet-width) {
+      width: 548px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 486px;
+    }
   }
 }
 
@@ -69,6 +136,23 @@
   width: 280px;
   margin-bottom: 23px;
   resize: none;
+
+  @media (min-width: @tablet-width) {
+    width: 631px;
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 10px;
+    padding-left: 19px;
+    margin-bottom: 65px;
+    border: 1px solid @grey;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 1220px;
+    margin-bottom: 67px;
+  }
 }
 
 .form__input-design {
@@ -76,7 +160,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 14px;
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+  }
 }
 
 .form__button {
@@ -87,6 +187,19 @@
   padding-top: 7px;
   padding-bottom: 7px;
   margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    width: 282px;
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
+  }
 }
 
 .form__addition {
@@ -94,4 +207,35 @@
   text-align: center;
   line-height: 16px;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    font-size: 16px;
+  }
+}
+
+.form__submit-wrapper {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 282px 282px;
+    column-gap: 61px;
+    padding-left: 67px;
+    margin-bottom: 72px;
+    margin-top: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin-left: 110px;
+    grid-template-columns: 568px 178px;
+    column-gap: 84px;
+    align-items: center;
+    margin-bottom: 82px;
+  }
+}
+
+.form__part--desktop {
+  @media (min-width: @desktop-width) {
+    padding-right: 80px;
+  }
 }
