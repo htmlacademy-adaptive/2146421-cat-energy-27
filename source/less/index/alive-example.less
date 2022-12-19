@@ -98,6 +98,7 @@
   @media (min-width: @tablet-width) {
     justify-content: flex-start;
     margin-bottom: 0;
+    min-height: 77px;
   }
 
   @media (min-width: @desktop-width) {
@@ -107,19 +108,22 @@
 
 .alive-example__weight,
 .alive-example__period {
+  position: relative;
+  min-height: 56px;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 124px;
   border: 1px solid @middle-grey;
+  border-radius: 3px;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     width: 162px;
   }
 }
 
 .alive-example__weight {
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     margin-right: 42px;
   }
 }
@@ -134,21 +138,35 @@
   line-height: 24px;
   color: @black;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
+    padding-top: 15px;
     font-size: 30px;
     line-height: 37px;
   }
 }
 
 .alive-example__count-title {
+  position: absolute;
+  top: 38px;
   margin: 0;
+  text-transform: lowercase;
   margin-top: 8px;
   text-align: center;
-  max-width: 90px;
+  width: 90px;
+  background-color: @grey;
+
+  @media (min-width: @tablet-width) {
+    width: 142px;
+    min-height: 77px;
+    top: 57px;
+    white-space: nowrap;
+    background-color: @white;
+  }
 
   @media (min-width: @desktop-width) {
     line-height: 14px;
     margin-top: 11px;
+    background-color: @grey;
   }
 }
 
@@ -160,6 +178,7 @@
   line-height: 20px;
   margin: 0;
   margin-bottom: 20px;
+  margin-top: 46px;
   text-align: center;
   text-transform: uppercase;
   color: @black;
@@ -169,6 +188,8 @@
     width: 174px;
     font-size: 20px;
     text-align: right;
+    margin-top: 31px;
+    margin-bottom: 31px;
   }
 
   @media (min-width: @desktop-width) {

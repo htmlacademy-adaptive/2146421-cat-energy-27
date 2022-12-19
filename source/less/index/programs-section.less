@@ -38,9 +38,71 @@
       margin-bottom: 0;
     }
   }
+
+  &:first-child .programs-section__header::after {
+    position: absolute;
+    content: "";
+    width: 36px;
+    height: 50px;
+    background-image: url("../img/slim-cat-icon.svg");
+    background-repeat: no-repeat;
+    left: -60px;
+    top: 50%;
+    transform: translateY(-16px);
+
+    @media (min-width: @tablet-width) {
+      width: 140px;
+      height: 194px;
+      background-image: url("../img/slim-cat-tablet.svg");
+      background-repeat: no-repeat;
+      left: 50%;
+      transform: translateX(63px);
+      top: 50%;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 70px;
+      height: 97px;
+      background-image: url("../img/slim-cat-desktop.svg");
+      background-repeat: no-repeat;
+      left: -47px;
+      top: 44px;
+    }
+  }
+
+  &:last-child .programs-section__header::after {
+    position: absolute;
+    content: "";
+    width: 67px;
+    height: 28px;
+    background-image: url("../img/panther-icon.svg");
+    background-repeat: no-repeat;
+    left: -80px;
+    top: 50%;
+    transform: translateY(-5px);
+
+    @media (min-width: @tablet-width) {
+      width: 268px;
+      height: 112px;
+      background-image: url("../img/panther-tablet.svg");
+      background-repeat: no-repeat;
+      left: 50%;
+      top: 100%;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 134px;
+      height: 56px;
+      background-image: url("../img/panther-desktop.svg");
+      background-repeat: no-repeat;
+      left: -19px;
+      top: 75px;
+    }
+  }
 }
 
 .programs-section__header {
+  position: relative;
   margin: 0;
   margin-left: 91px;
   box-sizing: border-box;
@@ -52,6 +114,33 @@
   line-height: 37px;
   text-transform: uppercase;
   color: @black;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: @green;
+    left: -70px;
+    top: 50%;
+    transform: translateY(-13px);
+
+    @media (min-width: @tablet-width) {
+      width: 200px;
+      height: 200px;
+      transform: translateY(25px);
+      left: calc(50% + 40px);
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 100px;
+      height: 100px;
+      transform: translateY(25px);
+      left: 0;
+      top: 25px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     padding-top: 77px;
@@ -103,6 +192,7 @@
 }
 
 .programs-section__catalog {
+  position: relative;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -116,6 +206,20 @@
   color: @black;
   text-align: left;
   background-color: @light-grey;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background: url("../img/arrow-icon.svg") no-repeat;
+    width: 24px;
+    height: 12px;
+    left: 125px;
+    top: 21px;
+
+    @media (min-width: @tablet-width) {
+      top: 10px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     margin-left: 52px;

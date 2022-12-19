@@ -3,21 +3,19 @@
 }
 
 .add__title {
+  position: relative;
   padding: 0;
+  padding-left: 20px;
+  padding-right: 14px;
   font-size: 24px;
   line-height: 26px;
   color: @black;
-  padding-bottom: 34px;
+  background-color: @white;
   text-transform: capitalize;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    padding-bottom: 57px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-bottom: 62px;
   }
 }
 
@@ -26,12 +24,14 @@
   margin: 0;
   list-style-type: none;
   margin-bottom: 34px;
+  margin-top: 24px;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 282px 282px;
     row-gap: 42px;
     column-gap: 61px;
+    margin-top: 91px;
   }
 
   @media (min-width: @desktop-width) {
@@ -39,13 +39,12 @@
     margin-right: 110px;
     gap: 0;
     margin-bottom: 41px;
+    margin-top: 153px;
   }
 }
 
 .add__item {
   padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 46px;
   color: @black;
 
   @media (min-width: @tablet-width) {
@@ -54,10 +53,62 @@
   }
 
   &:not(:last-child) {
-    margin-bottom: 13px;
+    margin-bottom: 14px;
 
     @media (min-width: @tablet-width) {
       margin: 0;
     }
+  }
+}
+
+.add__control {
+  position: relative;
+  display: block;
+  padding-left: 56px;
+  padding-top: 10px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 70px;
+  }
+}
+
+.add__mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 2px solid @middle-grey;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.add__control:hover .add__mark {
+  border-color: @black;
+}
+
+.add__input:disabled + .add__mark {
+  border-color: @black;
+}
+
+.add__input[type="checkbox"]:checked + .add__mark::before {
+  position: absolute;
+  background-image: url("../img/checked.svg");
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 16px;
+  content: "";
+  top: 9px;
+  left: 5px;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/checked-tablet.svg");
+    width: 25px;
+    height: 21px;
+    left: 7px;
+    top: 12px;
   }
 }

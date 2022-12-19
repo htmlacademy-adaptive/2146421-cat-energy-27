@@ -28,6 +28,7 @@
 }
 
 .gift__text {
+  position: relative;
   margin: 0;
   margin-top: 35px;
   padding: 187px 61px 43px 58px;
@@ -39,6 +40,28 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 82px;
+    background: url("../img/icon_gift.svg") no-repeat;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 25%;
+
+    @media (min-width: @tablet-width) {
+      left: 15%;
+      top: 30%;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 25%;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     padding: 71px 124px 69px 422px;

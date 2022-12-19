@@ -19,6 +19,7 @@
 }
 
 .site-list__item {
+  position: relative;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -46,12 +47,11 @@
     }
   }
 
-
   @media (min-width: @tablet-width) {
     border-bottom: none;
     font-size: 18px;
     line-height: 24px;
-    padding: 0;
+    padding-top: 0;
     font-weight: 400;
   }
 
@@ -64,6 +64,7 @@
 .site-list__link {
   text-decoration: none;
   color: @black;
+  padding-bottom: 8px;
 
   @media (min-width: @desktop-width) {
     color: @white;
@@ -73,5 +74,15 @@
     @media (min-width: @desktop-width) {
       color: @black;
     }
+  }
+}
+
+.site-list__link--current {
+  border-bottom: 2px solid @green;
+}
+
+.site-list__link--current-index-desktop {
+  @media (min-width: @desktop-width) {
+    border-bottom: 2px solid @white;
   }
 }

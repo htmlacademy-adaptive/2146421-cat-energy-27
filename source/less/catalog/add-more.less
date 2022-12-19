@@ -11,7 +11,9 @@
 }
 
 .add-more__title {
-  margin: 0;
+  position: relative;
+  width: 204px;
+  margin: 0 auto;
   margin-top: 78px;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -22,12 +24,54 @@
   text-transform: uppercase;
   color: @black;
 
+  &::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: @grey-3;
+    top: -34px;
+    left: 86px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 2px;
+    transform: rotate(90deg);
+    background-color: @grey-3;
+    top: -34px;
+    left: 86px;
+  }
+
   @media (min-width: @tablet-width) {
     width: 134px;
     margin: 0 auto;
     margin-top: 161px;
     font-size: 20px;
     line-height: 22px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 60px;
+      height: 2px;
+      background-color: @grey-3;
+      top: -66px;
+      left: 37px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 60px;
+      height: 2px;
+      transform: rotate(90deg);
+      background-color: @grey-3;
+      top: -66px;
+      left: 37px;
+    }
   }
 }
 
@@ -61,6 +105,7 @@
   width: 280px;
   margin: 0 auto;
   margin-top: 21px;
+  margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
     width: 252px;
