@@ -98,67 +98,28 @@
     background-color: @green;
     left: 0;
     top: 0;
+    background-repeat: no-repeat;
+    background-position: center;
 
     @media (min-width: @tablet-width) {
       top: 45px;
     }
   }
 
-  &:first-child .instruction__text::after {
-    position: absolute;
-    content: "";
-    background: url("../img/leaf-icon.svg") no-repeat;
-    width: 30px;
-    height: 30px;
-    left: 19px;
-    top: 15px;
-
-
-    @media (min-width: @tablet-width) {
-      top: 60px;
-    }
+  &--healthy::before {
+    background-image: url("../img/leaf-icon.svg");
   }
 
-  &:nth-child(2) .instruction__text::after {
-    position: absolute;
-    content: "";
-    background: url("../img/powder-icon.svg") no-repeat;
-    width: 30px;
-    height: 30px;
-    left: 17px;
-    top: 15px;
-
-    @media (min-width: @tablet-width) {
-      top: 60px;
-    }
+  &--powder::before {
+    background-image: url("../img/powder-icon.svg");
   }
 
-  &:nth-child(3) .instruction__text::after {
-    position: absolute;
-    content: "";
-    background: url("../img/fork-knife.svg") no-repeat;
-    width: 30px;
-    height: 30px;
-    left: 17px;
-    top: 15px;
-
-    @media (min-width: @tablet-width) {
-      top: 60px;
-    }
+  &--replace-meals::before {
+    background-image: url("../img/fork-knife.svg");
   }
 
-  &:nth-child(4) .instruction__text::after {
-    position: absolute;
-    content: "";
-    background: url("../img/scales.svg") no-repeat;
-    width: 30px;
-    height: 30px;
-    left: 17px;
-    top: 15px;
-
-    @media (min-width: @tablet-width) {
-      top: 60px;
-    }
+  &--period::before {
+    background-image: url("../img/scales.svg");
   }
 
   @media (min-width: @tablet-width) {

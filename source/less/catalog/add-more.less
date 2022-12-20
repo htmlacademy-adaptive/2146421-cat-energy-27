@@ -24,7 +24,8 @@
   text-transform: uppercase;
   color: @black;
 
-  &::before {
+  &::before,
+  &::after {
     position: absolute;
     content: "";
     width: 30px;
@@ -35,14 +36,7 @@
   }
 
   &::after {
-    position: absolute;
-    content: "";
-    width: 30px;
-    height: 2px;
     transform: rotate(90deg);
-    background-color: @grey-3;
-    top: -34px;
-    left: 86px;
   }
 
   @media (min-width: @tablet-width) {
@@ -52,16 +46,15 @@
     font-size: 20px;
     line-height: 22px;
 
-    &::before {
+    &::before,
+    &::after {
       width: 60px;
       top: -66px;
       left: 37px;
     }
 
     &::after {
-      width: 60px;
-      top: -66px;
-      left: 37px;
+      transform: rotate(90deg);
     }
   }
 }

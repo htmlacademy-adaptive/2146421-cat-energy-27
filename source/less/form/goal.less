@@ -1,4 +1,6 @@
 .goal {
+  overflow-x: hidden;
+
   @media (min-width: @desktop-width) {
     padding-right: 110px;
     padding-left: 0;
@@ -6,12 +8,29 @@
 }
 
 .goal__list {
+  position: relative;
   padding: 0;
   margin: 0;
   .paddings();
   list-style-type: none;
-  border-bottom: 1px solid @grey-border;
-  padding-top: 23px;
+  padding-top: 43px;
+
+  @media (max-width: @mobile-width-only) {
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 1000%;
+      height: 1px;
+      background-color: @grey-2;
+      top: 199px;
+      left: -30px;
+    }
+
+    &::after {
+      top: 26px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     box-sizing: border-box;
@@ -52,7 +71,7 @@
 .goal__control {
   position: relative;
   display: block;
-  padding-left: 56px;
+  padding-left: 50px;
   padding-top: 10px;
 
   @media (min-width: @tablet-width) {
