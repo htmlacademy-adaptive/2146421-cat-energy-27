@@ -27,10 +27,22 @@
 }
 
 .catalog__item {
+  position: relative;
   display: grid;
   grid-template-columns: 140px 1fr 1fr;
   padding-bottom: 25px;
-  border-bottom: 1px solid @middle-grey;
+
+  @media (max-width: @mobile-width-only) {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 1000%;
+      height: 1px;
+      background-color: @grey-2;
+      top: 252px;
+      left: -400px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     padding-left: 36px;

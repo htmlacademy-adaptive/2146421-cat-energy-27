@@ -42,7 +42,7 @@
   padding-top: 14px;
   padding-left: 20px;
   padding-bottom: 13px;
-  margin-left: 20px;
+  margin-left: 10px;
   border: 1px solid #e7e7e7;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -52,7 +52,6 @@
   align-items: center;
   text-transform: uppercase;
   color: #444444;
-
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
@@ -97,7 +96,13 @@
   }
 
   &--input-phone {
+    position: relative;
     width: 202px;
+    padding-right: 56px;
+    background-image: url("../img/phone-icon.svg");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 19px), center;
+
 
     @media (min-width: @tablet-width) {
       width: 529px;
@@ -110,6 +115,10 @@
 
   &--input-email {
     width: 220px;
+    padding-right: 56px;
+    background-image: url("../img/email-icon.svg");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 19px), center;
 
     @media (min-width: @tablet-width) {
       width: 548px;
@@ -135,6 +144,7 @@
   padding-right: 12px;
   width: 280px;
   margin-bottom: 23px;
+  margin-top: 38px;
   resize: none;
 
   @media (min-width: @tablet-width) {

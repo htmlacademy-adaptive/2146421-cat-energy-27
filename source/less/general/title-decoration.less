@@ -1,0 +1,29 @@
+.title-decoration {
+  &::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 1000%;
+    background-color: @green;
+    left: calc(100% + 22px);
+    top: 50%;
+
+    @media (min-width: @tablet-width) {
+      left: calc(100% + 42px);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 1000%;
+    background-color: @green;
+    right: calc(100% + 22px);
+    top: 50%;
+
+    @media (min-width: @tablet-width) {
+      right: calc(100% + 40px);
+    }
+  }
+}

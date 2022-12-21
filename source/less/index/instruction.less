@@ -38,8 +38,11 @@
   padding: 0;
   list-style-type: none;
   margin-top: 40px;
+  counter-reset: section;
 
   @media (min-width: @tablet-width) and (max-width: 1439px) {
+    width: 629px;
+    min-height: 597px;
     display: grid;
     grid-template-columns: 246px 246px;
     column-gap: 153px;
@@ -49,6 +52,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    min-height: 280px;
     width: 1220px;
     display: flex;
     justify-content: space-between;
@@ -58,6 +62,7 @@
 }
 
 .instruction__item {
+  position: relative;
   padding-left: 80px;
 
   &:not(:last-child) {
@@ -66,6 +71,55 @@
     @media (min-width: @tablet-width) {
       margin-bottom: 0;
     }
+  }
+
+  &::after {
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      counter-increment: section;
+      content: counters(section, ".", decimal) " ";
+      color: @light-grey;
+      font-family: "Oswald", "Arial", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 280px;
+      line-height: 280px;
+      top: 0;
+      left: 50%;
+      z-index: 0;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: @green;
+    left: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: @tablet-width) {
+      top: 45px;
+    }
+  }
+
+  &--healthy::before {
+    background-image: url("../img/leaf-icon.svg");
+  }
+
+  &--powder::before {
+    background-image: url("../img/powder-icon.svg");
+  }
+
+  &--replace-meals::before {
+    background-image: url("../img/fork-knife.svg");
+  }
+
+  &--period::before {
+    background-image: url("../img/scales.svg");
   }
 
   @media (min-width: @tablet-width) {
@@ -78,6 +132,7 @@
 }
 
 .instruction__text {
+  width: 196px;
   margin: 0;
   font-style: normal;
   font-weight: 400;
@@ -86,16 +141,20 @@
   color: @dark-grey;
 
   @media (min-width: @tablet-width) {
+    position: absolute;
     width: 224px;
-    padding-right: 22px;
+    height: 100px;
+    padding: 134px 25px 191px 0;
     font-size: 16px;
     line-height: 24px;
-    padding-top: 151px;
-    padding-bottom: 57px;
+    top: 0;
+    left: 0;
+    z-index: 10;
   }
 
   @media (min-width: @desktop-width) {
     width: 204px;
     margin-right: 26px;
+    padding-bottom: 57px;
   }
 }

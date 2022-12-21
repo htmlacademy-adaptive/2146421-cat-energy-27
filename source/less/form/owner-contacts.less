@@ -1,4 +1,5 @@
 .owner-contacts__title {
+  position: relative;
   margin: 0;
   width: 187px;
   font-family: "Oswald", "Arial", sans-serif;
@@ -13,10 +14,10 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 0;
-    width: 512px;
+    padding-bottom: 0;
+    min-width: 520px;
     font-size: 36px;
     line-height: 36px;
-    padding-bottom: 76px;
   }
 
   @media (min-width: @desktop-width) {
@@ -32,6 +33,10 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 76px;
+  }
 
   &:not(:last-child) {
     @media (min-width: @desktop-width) {

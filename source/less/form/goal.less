@@ -1,4 +1,6 @@
 .goal {
+  overflow-x: hidden;
+
   @media (min-width: @desktop-width) {
     padding-right: 110px;
     padding-left: 0;
@@ -6,12 +8,29 @@
 }
 
 .goal__list {
+  position: relative;
   padding: 0;
   margin: 0;
   .paddings();
   list-style-type: none;
-  border-bottom: 1px solid @grey-border;
-  padding-top: 23px;
+  padding-top: 43px;
+
+  @media (max-width: @mobile-width-only) {
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 1000%;
+      height: 1px;
+      background-color: @grey-2;
+      top: 199px;
+      left: -30px;
+    }
+
+    &::after {
+      top: 26px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     box-sizing: border-box;
@@ -26,6 +45,7 @@
   @media (min-width: @desktop-width) {
     margin: 0;
     width: 570px;
+    padding-bottom: 0;
   }
 }
 
@@ -45,5 +65,56 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+.goal__control {
+  position: relative;
+  display: block;
+  padding-left: 50px;
+  padding-top: 10px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 70px;
+  }
+}
+
+.goal__mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 2px solid @middle-grey;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.goal__control:hover .goal__mark {
+  border: 2px solid @black;
+}
+
+.goal__input:disabled + .goal__mark {
+  border-color: #242424;
+}
+
+.goal__input[type="radio"]:checked + .goal__mark::before {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  background-color: @green;
+  border-radius: 50%;
+  content: "";
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
   }
 }
