@@ -96,8 +96,12 @@
 }
 
 .catalog__image-link {
-  grid-row: 1 /3;
-  min-height: 112px;
+  grid-row: 1 /4;
+  align-self: end;
+
+  @media (min-width: @tablet-width) {
+    align-self: center;
+  }
 }
 
 .catalog__image {
