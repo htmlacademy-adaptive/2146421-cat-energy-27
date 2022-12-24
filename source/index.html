@@ -15,9 +15,15 @@
 <body class="page__body">
   <header class="main-header">
     <a class="logo" href="#">
-      <img class="logo__image" src="img/logo-mobile.svg" width="33" height="38"
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" width="174" height="52">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="174" height="52">
+        <img class="logo__image" src="img/logo-mobile.svg" width="33" height="38"
           alt="Мультяшный кот в костюме супергероя.">
-      <img class="logo__text" src="img/footer-logo.svg" width="101" height="18" alt="Cat-energy.">
+      </picture>
+      <picture>
+        <img class="logo__cat-energy" src="img/cat-energy-logo.svg" width="101" height="18" alt="Cat-energy.">
+      </picture>
     </a>
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">
@@ -54,8 +60,12 @@
         </div>
         <div class="hero-section__design-wrapper">
           <a class="hero-section__choosing-of-program button" href="form.html">Подобрать программу</a>
-          <img class="hero-section__image" src="img/main-product.png" width="280" height="270"
-            alt="Баночка с питанием для котов.">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/main-product-desktop.png 1x, img/main-product-desktop@2x.png 2x" width="552" height="499">
+            <source media="(min-width: 768px)" srcset="img/main-product-tablet.png 1x, img/main-product-tablet@2x.png 2x" width="709" height="609">
+            <img class="hero-section__image" src="img/main-product.png" srcset="img/main-product@2x.png 2x" width="280" height="270"
+              alt="Баночка с питанием для котов.">
+          </picture>
         </div>
       </section>
     </div>
@@ -130,12 +140,19 @@
       </div>
       <div class="alive-example__background"></div>
       <div class="alive-example__range">
-        <span class="alive-example__range-strip"></span>
         <button class="alive-example__button" type="button">
           <span class="visually-hidden">Кнопка изменений.</span>
         </button>
-        <img class="alive-example__image" src="img/cat-before.png" width="280" height="256" alt="Полная кошка.">
-        <img class="alive-example__image" src="img/cat-after.png" width="280" height="256" alt="Худая кошка.">
+        <div class="alive-example__images">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/cat-before-tablet.png 1x, img/cat-before-tablet@2x.png 2x" width="560" height="512">
+            <img class="alive-example__image-fat" src="img/cat-before.png" srcset="img/cat-before@2x.png" width="280" height="256" alt="Полная кошка.">
+          </picture>
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/cat-after-tablet.png 1x, img/cat-after-tablet@2x.png 2x" width="560" height="512">
+            <img class="alive-example__image-slim" src="img/cat-after.png" srcset="img/cat-after@2x.png" width="280" height="256" alt="Худая кошка.">
+          </picture>
+        </div>
       </div>
     </section>
 

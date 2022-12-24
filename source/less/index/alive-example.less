@@ -1,5 +1,5 @@
 .alive-example__wrapper {
-  padding: 25px 20px 40px;
+  padding: 25px 20px;
   background-color: @grey;
 
   @media (min-width: @tablet-width) {
@@ -26,6 +26,9 @@
 }
 
 .alive-example {
+  min-height: 659px;
+  background-color: @grey;
+
   @media (min-width: @tablet-width) {
     position: relative;
   }
@@ -191,17 +194,89 @@
 }
 
 .alive-example__range {
+  position: relative;
+  width: 280px;
+  height: 256px;
+  margin: 0 auto;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 256px;
+    width: 4px;
+    border-radius: 2px;
+    background-color: @strip-grey;
+    z-index: 5;
+    left: 50%;
+    top: 1px;
+
+    @media (min-width: @tablet-width) {
+      height: 512px;
+      left: 100%;
+      top: 20px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     position: absolute;
     background-color: transparent;
     z-index: 4;
-    left: 100px;
+    left: 50%;
+    transform: translateX(-100%);
     bottom: 320px;
   }
 
   @media (min-width: @desktop-width) {
-    left: 50%;
+    left: 75%;
+    top: 0;
   }
+}
+
+.alive-example__images {
+  display: grid;
+  grid-template-columns: 140px 140px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 280px 280px;
+  }
+}
+
+.alive-example__button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/alive-example-button.svg");
+  border: none;
+  background-color: transparent;
+  z-index: 5;
+  left: 50%;
+  top: 50%;
+  transform: translate(calc(-50% + 2px), -50%);
+
+  @media (min-width: @tablet-width) {
+    left: 100%;
+    transform: translate(calc(-50% + 2px), -50%);
+    top: 100%;
+  }
+}
+
+.alive-example__image-fat,
+.alive-example__image-slim {
+  height: 256px;
+  object-fit: cover;
+  object-position: 0 0;
+
+  @media (min-width: @tablet-width) {
+    height: 512px;
+  }
+}
+
+.alive-example__image-fat {
+  object-position: 0 0;
+}
+
+.alive-example__image-slim {
+  object-position: 99% 0;
 }
 
 .alive-example__background {
