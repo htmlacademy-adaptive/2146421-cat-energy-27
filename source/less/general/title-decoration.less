@@ -1,29 +1,32 @@
 .title-decoration {
-  &::before {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 1000%;
-    background-color: @green;
-    left: calc(100% + 22px);
-    top: 50%;
+  position: absolute;
+  padding: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  color: @black;
+  text-transform: capitalize;
+  display: inline;
+  background-color: @white;
+  padding-left: 21px;
+  padding-right: 23px;
+  margin-top: 26px;
+  margin-bottom: 35px;
+  top: -89px;
+  z-index: 4;
 
-    @media (min-width: @tablet-width) {
-      left: calc(100% + 42px);
-    }
+  @media (min-width: @tablet-width) {
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 36px;
+    line-height: 36px;
+    top: -118px;
+    left: 30px;
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 1000%;
-    background-color: @green;
-    right: calc(100% + 22px);
-    top: 50%;
-
-    @media (min-width: @tablet-width) {
-      right: calc(100% + 40px);
-    }
+  @media (min-width: @desktop-width) {
+    left: calc(50% - 530px);
   }
 }
