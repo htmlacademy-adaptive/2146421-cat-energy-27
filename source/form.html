@@ -21,9 +21,7 @@
         <img class="logo__image" src="img/logo-mobile.svg" width="33" height="38"
           alt="Мультяшный кот в костюме супергероя.">
       </picture>
-      <picture>
-        <img class="logo__cat-energy" src="img/cat-energy-logo.svg" width="101" height="18" alt="Cat-energy.">
-      </picture>
+      <img class="logo__cat-energy" src="img/cat-energy-logo.svg" width="101" height="18" alt="Cat-energy.">
     </a>
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">
@@ -57,8 +55,8 @@
     </div>
     <form class="main-form-container__form form" action="https://echo.htmlacademy.ru/" method="get">
       <div class="form__part-wrapper">
-        <fieldset class="form__part form__part--desktop">
-          <div class="form__wrapper-cats-data">
+        <div class="form__wrapper-cats-data">
+          <fieldset class="form__part form__part--desktop">
             <legend class="visually-hidden">Данные котечки.</legend>
             <div class="form__input-design">
               <label class="form__label" for="form__name"> Имя:*</label>
@@ -73,8 +71,8 @@
               <label class="form__label" for="form__age"> Возраст (лет):</label>
               <input class="form__input form__input--input-age" id="form__age" type="number" name="age" max="40" placeholder="7">
             </div>
-
-        </fieldset>
+          </fieldset>
+        </div>
         <fieldset class="form__part goal">
           <legend class="visually-hidden">Цель приобретения продукта.</legend>
           <ul class="goal__list">
@@ -102,9 +100,9 @@
           </ul>
         </fieldset>
       </div>
-      <fieldset class="form__part owner-contacts">
-        <legend class="owner-contacts__title title-decoration">Контактные данные (владельца кота)</legend>
-        <div class="form__wrapper">
+      <div class="form__part">
+        <fieldset class="form__wrapper owner-contacts">
+          <legend><span class="owner-contacts__title title-decoration">Контактные данные (владельца кота)</span></legend>
           <div class="owner-contacts__wrapper-desktop">
             <div class="owner-contacts__wrapper">
               <label class="owner-contacts__label" for="owner-contacts__email"> E-mail:*</label>
@@ -116,20 +114,20 @@
               <input class="form__input form__input--input-phone" id="owner-contacts__tel" type="tel" name="phone" placeholder="8 (960) 900-60-90">
             </div>
           </div>
-        </div>
-      </fieldset>
+        </fieldset>
+      </div>
 
-      <fieldset class="form__part comment">
-        <legend class="comment__title title-decoration">Комментарий</legend>
-        <div class="form__wrapper">
+      <div class="form__part">
+        <fieldset class="form__wrapper comment">
+          <legend><span class="comment__title title-decoration">Комментарий</span></legend>
           <textarea class="form__input-comment" name="comment" rows="7" cols="70"
             placeholder="Расскажите обо всех повадках кота"></textarea>
-        </div>
-      </fieldset>
+        </fieldset>
+      </div>
 
-      <fieldset class="form__part add">
-        <legend class="add__title title-decoration">Дополнительно</legend>
-        <div class="form__wrapper">
+      <div class="form__part">
+        <fieldset class="form__wrapper add">
+          <legend><span class="add__title title-decoration">Дополнительно</span></legend>
           <ul class="add__list">
             <li class="add__item">
               <label class="add__control">
@@ -163,8 +161,8 @@
               </label>
             </li>
           </ul>
-        </div>
-      </fieldset>
+        </fieldset>
+      </div>
       <div class="form__submit-wrapper">
         <button class="form__button button" type="submit">Отправить заявку</button>
         <p class="form__addition">* — Обязательные поля</p>
