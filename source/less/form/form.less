@@ -1,7 +1,7 @@
 .form__part {
+  position: relative;
   padding: 0;
   margin: 0;
-  .paddings();
   border: none;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -10,23 +10,70 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @dark-grey;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 
-  @media (min-width: @tablet-width) {
-    padding-left: 71px;
-    padding-right: 67px;
-    padding-bottom: 0;
+  &:first-child {
+    margin-bottom: 25px;
   }
 
-  @media (min-width: @desktop-width) {
-    .paddings-desktop();
+  @media (min-width: @tablet-width) {
+    padding-bottom: 0;
+    margin-bottom: 65px;
+    margin-top: 50px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: @green;
+    top: 46px;
+
+    @media (min-width: @tablet-width) {
+      top: 24px;
+    }
   }
 }
 
 .form__part-wrapper {
   @media (min-width: @desktop-width) {
     display: flex;
-    padding-bottom: 69px;
+    width: 1220px;
+    margin: 0 auto;
+  }
+}
+
+.form__wrapper {
+  border: none;
+  .paddings();
+
+  @media (min-width: @tablet-width) {
+    .paddings-tablet-form();
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
+  }
+}
+
+.form__wrapper-cats-data {
+  .paddings();
+
+  @media (min-width: @tablet-width) {
+    .paddings-tablet-form();
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+.form__part.goal,
+.form__part.form__part--desktop {
+  &::before {
+    background-color: transparent;
   }
 }
 
@@ -138,30 +185,26 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #444444;
+  border: 1px solid @grey;
   box-sizing: border-box;
   padding-top: 9px;
   padding-left: 15px;
   padding-right: 12px;
-  width: 280px;
-  margin-bottom: 23px;
-  margin-top: 38px;
+  width: 100%;
+  margin-bottom: 8px;
+  margin-top: 8px;
   resize: none;
 
   @media (min-width: @tablet-width) {
-    width: 631px;
     font-size: 20px;
     line-height: 30px;
     padding-top: 10px;
     padding-left: 19px;
-    margin-bottom: 65px;
-    border: 1px solid @grey;
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 0;
     padding-bottom: 0;
-    width: 1220px;
-    margin-bottom: 67px;
   }
 }
 
@@ -214,9 +257,12 @@
 
 .form__addition {
   margin: 0;
-  text-align: center;
   line-height: 16px;
   color: @black;
+
+  @media (max-width: @mobile-width-only) {
+    margin-left: 84px;
+  }
 
   @media (min-width: @tablet-width) {
     text-align: left;
@@ -235,8 +281,9 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
     padding: 0;
-    margin-left: 110px;
     grid-template-columns: 568px 178px;
     column-gap: 84px;
     align-items: center;

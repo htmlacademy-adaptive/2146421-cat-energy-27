@@ -1,8 +1,30 @@
-.additions {
+.additions__wrapper {
   @media (min-width: @desktop-width) {
     width: 1220px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+  }
+}
+
+.additions {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: @green;
+    top: -44px;
+    z-index: 3;
+
+    @media (min-width: @tablet-width) {
+      top: -87px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 97px;
+    }
   }
 }

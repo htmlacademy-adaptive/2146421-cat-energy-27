@@ -1,29 +1,6 @@
 .owner-contacts__title {
-  position: relative;
-  margin: 0;
-  width: 187px;
-  font-family: "Oswald", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 26px;
-  color: @black;
-  text-transform: none;
-  padding-top: 26px;
-  padding-bottom: 35px;
-
-  @media (min-width: @tablet-width) {
-    padding-top: 0;
-    padding-bottom: 0;
-    min-width: 520px;
-    font-size: 36px;
-    line-height: 36px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-left: 0;
-    padding-right: 0;
-    width: 516px;
+  @media (max-width: @mobile-width-only) {
+    width: 187px;
   }
 }
 
@@ -34,8 +11,10 @@
   align-items: center;
   margin-bottom: 14px;
 
-  @media (min-width: @tablet-width) {
-    margin-top: 76px;
+  &:first-child {
+    @media (max-width: @mobile-width-only) {
+      margin-top: 30px;
+    }
   }
 
   &:not(:last-child) {
@@ -49,6 +28,7 @@
   @media (min-width: @desktop-width) {
     width: 1220px;
     display: flex;
+    justify-content: space-between;
   }
 }
 
