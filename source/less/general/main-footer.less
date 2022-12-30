@@ -49,18 +49,36 @@
   margin-bottom: 25px;
   margin-left: 8px;
 
+  &:hover {
+    transition: 0.2s ease-out 0s;
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   @media (min-width: @tablet-width) {
     margin: 0;
   }
 }
 
 .main-footer__logo-html {
+  width: 100%;
+  padding-top: 20px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-decoration: none;
+  fill: @dark-grey;
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
+    width: 168px;
     padding: 0;
-    align-items: center;
   }
 }
 

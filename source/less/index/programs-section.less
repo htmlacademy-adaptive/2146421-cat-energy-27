@@ -206,20 +206,33 @@
   color: @black;
   text-align: left;
   background-color: @light-grey;
+  background-image: url("../img/arrow-icon.svg");
+  background-repeat: no-repeat;
+  background-size: 24px 12px;
+  background-position: 115px center;
 
-  &::before {
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover {
+    transition: 0.2s ease-out 0s;
+    background-image: url("../img/arrow-hover.svg");
+    background-size: 32px 12px;
+  }
+
+  /*&::before {
     position: absolute;
     content: "";
     background: url("../img/arrow-icon.svg") no-repeat;
-    width: 24px;
-    height: 12px;
+    background-size: 24px 12px;
     left: 125px;
     top: 21px;
 
     @media (min-width: @tablet-width) {
       top: 10px;
     }
-  }
+  }*/
 
   @media (min-width: @tablet-width) {
     margin-left: 52px;
@@ -227,6 +240,7 @@
     font-size: 20px;
     line-height: 30px;
     padding-bottom: 52px;
+    background-position: 115px 10px;
   }
 
   @media (min-width: @desktop-width) {
