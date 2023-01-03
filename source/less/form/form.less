@@ -10,16 +10,17 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @dark-grey;
-  margin-bottom: 10px;
 
   &:first-child {
     margin-bottom: 25px;
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 42px;
+    }
   }
 
   @media (min-width: @tablet-width) {
     padding-bottom: 0;
-    margin-bottom: 65px;
-    margin-top: 50px;
   }
 
   &::before {
@@ -28,10 +29,10 @@
     height: 2px;
     width: 100%;
     background-color: @green;
-    top: 46px;
+    top: 15px;
 
     @media (min-width: @tablet-width) {
-      top: 24px;
+      top: 53px;
     }
   }
 }
@@ -47,6 +48,7 @@
 .form__wrapper {
   border: none;
   .paddings();
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     .paddings-tablet-form();
@@ -62,7 +64,8 @@
   .paddings();
 
   @media (min-width: @tablet-width) {
-    .paddings-tablet-form();
+    padding-left: 70px;
+    padding-right: 70px;
   }
 
   @media (min-width: @desktop-width) {
@@ -86,10 +89,10 @@
   display: flex;
   flex-grow: 1;
   box-sizing: border-box;
-  padding-top: 14px;
-  padding-left: 20px;
-  padding-bottom: 13px;
-  margin-left: 10px;
+  padding-top: 10px;
+  padding-left: 19px;
+  padding-bottom: 10px;
+  margin-left: 15px;
   border: 1px solid #e7e7e7;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -109,7 +112,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 0;
+    margin-left: 20px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -164,10 +167,6 @@
     position: relative;
     width: 202px;
     padding-right: 56px;
-    background-image: url("../img/phone-icon.svg");
-    background-repeat: no-repeat;
-    background-position: calc(100% - 19px), center;
-
 
     @media (min-width: @tablet-width) {
       width: 529px;
@@ -176,14 +175,16 @@
     @media (min-width: @desktop-width) {
       width: 467px;
     }
+
+    &:focus + .owner-contacts__icon {
+      color: @green;
+    }
   }
 
   &--input-email {
-    width: 220px;
-    padding-right: 56px;
-    background-image: url("../img/email-icon.svg");
-    background-repeat: no-repeat;
-    background-position: calc(100% - 19px), center;
+    position: relative;
+    width: 217px;
+    padding-right: 40px;
 
     @media (min-width: @tablet-width) {
       width: 548px;
@@ -191,6 +192,10 @@
 
     @media (min-width: @desktop-width) {
       width: 486px;
+    }
+
+    &:focus + .owner-contacts__icon {
+      color: @green;
     }
   }
 }
@@ -209,20 +214,25 @@
   padding-left: 15px;
   padding-right: 12px;
   width: 100%;
-  margin-bottom: 8px;
-  margin-top: 8px;
   resize: none;
+  min-height: 150px;
+  margin-bottom: -7px;
+  margin-top: 9px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
     padding-top: 10px;
     padding-left: 19px;
+    height: 174px;
+    margin-top: 43px;
+    margin-bottom: 23px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 0;
+    padding-top: 9px;
     padding-bottom: 0;
+    margin-top: 38px;
   }
 }
 
@@ -238,7 +248,7 @@
   }
 
   &:not(:last-child) {
-    margin-bottom: 14px;
+    margin-bottom: 19px;
 
     @media (min-width: @desktop-width) {
       margin-bottom: 20px;
@@ -251,13 +261,16 @@
 }
 
 .form__button {
+  font-size: 16px;
+  line-height: 20px;
   background-color: @green;
   color: @white;
   margin-left: 20px;
   width: 280px;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   margin-bottom: 21px;
+  margin-top: 9px;
 
   &:hover {
     background-color: rgb(95, 172, 47);
@@ -274,6 +287,7 @@
     padding-top: 13px;
     padding-bottom: 13px;
     margin: 0;
+    margin-left: 3px;
   }
 
   @media (min-width: @desktop-width) {
@@ -285,6 +299,7 @@
   margin: 0;
   line-height: 16px;
   color: @black;
+  margin-bottom: 33px;
 
   @media (max-width: @mobile-width-only) {
     margin-left: 84px;
@@ -293,6 +308,9 @@
   @media (min-width: @tablet-width) {
     text-align: left;
     font-size: 16px;
+    padding-top: 14px;
+    padding-left: 4px;
+    margin-bottom: 22px;
   }
 }
 
@@ -310,10 +328,11 @@
     width: 1220px;
     margin: 0 auto;
     padding: 0;
-    grid-template-columns: 568px 178px;
+    grid-template-columns: 568px 190px;
     column-gap: 84px;
     align-items: center;
-    margin-bottom: 82px;
+    margin-bottom: 85px;
+    margin-top: 36px;
   }
 }
 

@@ -8,12 +8,10 @@
 
 .goal__list {
   position: relative;
-  padding: 0;
   margin: 0;
-  .paddings();
   list-style-type: none;
-  padding-top: 23px;
-  padding-bottom: 20px;
+  padding: 10px 20px 20px;
+  margin-bottom: 4px;
 
   @media (max-width: @mobile-width-only) {
     &::before,
@@ -23,62 +21,58 @@
       width: 1000%;
       height: 1px;
       background-color: @grey-2;
-      top: 197px;
+      top: 157px;
       left: -30px;
     }
 
     &::after {
-      top: 11px;
+      top: -3px;
     }
   }
 
   @media (min-width: @tablet-width) {
     box-sizing: border-box;
-    padding-top: 30px;
-    padding-bottom: 34px;
-    padding-left: 70px;
-    border: 1px solid @grey;
+    padding-top: 57px;
+    padding-bottom: 69px;
+    padding-left: 98px;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
     width: 570px;
-    padding-bottom: 0;
+    padding-top: 8px;
+    padding-bottom: 15px;
+    padding-left: 29px;
   }
 }
 
 .goal__item {
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   color: rgba(34, 34, 34, 1);
-
-  &:not(:last-child) {
-    padding-bottom: 13px;
-  }
-
-  &:last-child {
-    padding-bottom: 19px;
-  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    padding-top: 12px;
+    padding-bottom: 1px;
   }
 }
 
 .goal__control {
   position: relative;
   display: block;
-  padding-left: 50px;
+  padding-left: 46px;
   padding-top: 10px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 70px;
+    padding-left: 60px;
   }
 }
 
 .goal__mark {
   position: absolute;
+  box-sizing: border-box;
   top: 2px;
   left: 0;
   width: 30px;
@@ -93,11 +87,15 @@
 }
 
 .goal__control:hover .goal__mark {
-  border: 2px solid @black;
+  border: 2px solid rgba(186, 186, 186, 1);
 }
 
 .goal__input:disabled + .goal__mark {
-  border-color: #242424;
+  opacity: 0.3;
+}
+
+.goal__input:disabled ~ .goal__label {
+  opacity: 0.3;
 }
 
 .goal__input[type="radio"]:checked + .goal__mark::before {

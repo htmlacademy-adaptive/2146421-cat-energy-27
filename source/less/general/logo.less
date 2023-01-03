@@ -17,10 +17,14 @@
     width: 174px;
     margin-right: 94px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 202px;
+  }
 }
 
 .logo__cat-energy {
-  margin: 20px 65px 7px 57px;
+  margin: 11px 65px 24px 57px;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -30,13 +34,23 @@
 .logo__text {
   align-self: center;
   margin: 20px 65px 17px 57px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    transform: scale(1.1);
+  }
 }
 
 .logo__image {
   margin-left: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 0;
+    margin-bottom: 9px;
+    margin-left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 3px;
   }
 }

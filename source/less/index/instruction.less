@@ -1,5 +1,5 @@
 .instruction__wrapper {
-  padding: 20px 20px 57px 20px;
+  padding: 18px 20px 57px 20px;
 
   @media (min-width: @tablet-width) {
     .paddings-tablet();
@@ -30,6 +30,7 @@
   @media (min-width: @desktop-width) {
     width: 1220px;
     margin: 0 auto;
+    padding-top: 55px;
   }
 }
 
@@ -37,18 +38,19 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-  margin-top: 40px;
+  margin-top: 41px;
   counter-reset: section;
 
   @media (min-width: @tablet-width) and (max-width: 1439px) {
-    width: 629px;
+    width: 703px;
     min-height: 597px;
     display: grid;
     grid-template-columns: 246px 246px;
-    column-gap: 153px;
-    row-gap: 37px;
+    column-gap: 137px;
+    row-gap: 41px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 39px;
   }
 
   @media (min-width: @desktop-width) {
@@ -66,7 +68,7 @@
   padding-left: 80px;
 
   &:not(:last-child) {
-    margin-bottom: 24px;
+    margin-bottom: 26px;
 
     @media (min-width: @tablet-width) {
       margin-bottom: 0;
@@ -84,9 +86,14 @@
       font-weight: 400;
       font-size: 280px;
       line-height: 280px;
-      top: 0;
-      left: 50%;
+      top: -4px;
+      left: calc(50% - 11px);
       z-index: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 0;
+      left: calc(50% - 7px);
     }
   }
 
@@ -102,7 +109,13 @@
     background-position: center;
 
     @media (min-width: @tablet-width) {
-      top: 45px;
+      top: 34px;
+      width: 80px;
+      height: 80px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 39px;
     }
   }
 
@@ -127,7 +140,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 230px;
+    width: 247px;
   }
 }
 
@@ -142,9 +155,9 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    width: 224px;
+    width: 250px;
     height: 100px;
-    padding: 134px 25px 191px 0;
+    padding: 146px 25px 191px 0;
     font-size: 16px;
     line-height: 24px;
     top: 0;
@@ -153,8 +166,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 204px;
+    width: 260px;
     margin-right: 26px;
     padding-bottom: 57px;
+    padding-top: 152px;
   }
 }
