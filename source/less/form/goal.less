@@ -1,5 +1,12 @@
 .goal {
   overflow-x: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
 
   @media (min-width: @desktop-width) {
     padding-left: 0;
@@ -26,7 +33,7 @@
     }
 
     &::after {
-      top: -3px;
+      top: 1px;
     }
   }
 
@@ -35,6 +42,7 @@
     padding-top: 57px;
     padding-bottom: 69px;
     padding-left: 98px;
+    border: 1px solid @grey;
   }
 
   @media (min-width: @desktop-width) {
