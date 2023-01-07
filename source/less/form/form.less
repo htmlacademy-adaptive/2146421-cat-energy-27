@@ -137,7 +137,8 @@
     margin: 0;
   }
 
-  input[type="number"] {
+  .form__input--input-weight,
+  .form__input--input-age {
     appearance: textfield;
   }
 
@@ -185,8 +186,20 @@
       width: 467px;
     }
 
-    &:focus + .owner-contacts__icon {
+    &:focus + .form__input--icon {
       color: @green;
+    }
+  }
+
+  .form__input--icon {
+    position: absolute;
+    top: 14px;
+    left: 88%;
+    color: @black;
+
+    @media (min-width: @tablet-width) {
+      left: 94%;
+      top: 18px;
     }
   }
 
@@ -209,7 +222,7 @@
       width: 486px;
     }
 
-    &:focus + .owner-contacts__icon {
+    &:focus + .form__input--icon {
       color: @green;
     }
   }

@@ -41,17 +41,19 @@
 
   @media (min-width: @tablet-width) {
     box-sizing: border-box;
-    padding-top: 57px;
-    padding-bottom: 69px;
+    padding-top: 9px;
+    padding-bottom: 27px;
+    margin-top: 47px;
+    margin-bottom: 46px;
     padding-left: 30px;
-    border: 1px solid @grey;
+    border: 1px solid #eaeaea;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
     width: 570px;
     padding-top: 8px;
-    padding-bottom: 15px;
+    padding-bottom: 27px;
     padding-left: 29px;
   }
 }
@@ -108,7 +110,7 @@
   opacity: 0.3;
 }
 
-.goal__input[type="radio"]:checked + .goal__mark::before {
+.goal__input:checked + .goal__mark::before {
   position: absolute;
   width: 13px;
   height: 13px;
