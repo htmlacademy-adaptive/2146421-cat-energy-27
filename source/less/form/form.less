@@ -88,6 +88,7 @@
 }
 
 .form__input {
+  position: relative;
   display: flex;
   flex-grow: 1;
   box-sizing: border-box;
@@ -186,20 +187,8 @@
       width: 467px;
     }
 
-    &:focus + .form__input--icon {
+    &:focus + .form__input-icon {
       color: @green;
-    }
-  }
-
-  .form__input--icon {
-    position: absolute;
-    top: 14px;
-    left: 88%;
-    color: @black;
-
-    @media (min-width: @tablet-width) {
-      left: 94%;
-      top: 18px;
     }
   }
 
@@ -222,9 +211,21 @@
       width: 486px;
     }
 
-    &:focus + .form__input--icon {
+    &:focus + .form__input-icon {
       color: @green;
     }
+  }
+}
+
+.form__input-icon {
+  position: absolute;
+  top: 14px;
+  left: 88%;
+  color: @black;
+
+  @media (min-width: @tablet-width) {
+    left: 94%;
+    top: 18px;
   }
 }
 
