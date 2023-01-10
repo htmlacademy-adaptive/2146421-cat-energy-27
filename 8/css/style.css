@@ -1468,13 +1468,21 @@ img {
     top: 46px;
   }
 }
-.alive-example__button:focus + .alive-example__scale,
-.alive-example__button:hover + .alive-example__scale {
+.alive-example__button:hover + .alive-example__scale,
+.alive-example__button:focus + .alive-example__scale {
   transition: 0.2s ease-out 0s;
   background-color: #68b738;
 }
 .alive-example__button:active + .alive-example__scale {
   background-color: rgba(104, 183, 56, 0.6);
+}
+.alive-example__button:hover > .alive-example__curtain-icon,
+.alive-example__button:focus > .alive-example__curtain-icon {
+  transition: 0.2s ease-out 0s;
+  color: #68b738;
+}
+.alive-example__button:active > .alive-example__curtain-icon {
+  color: rgba(104, 183, 56, 0.6);
 }
 .alive-example__images {
   display: grid;
@@ -1493,25 +1501,18 @@ img {
 }
 .alive-example__curtain-icon {
   color: #666666;
-  margin-top: 220px;
+  height: 50px;
 }
-.alive-example__curtain-icon:hover {
-  transition: 0.2s ease-out 0s;
-  color: #68b738;
-}
-.alive-example__curtain-icon:active {
-  color: rgba(104, 183, 56, 0.6);
-}
-.alive-example__curtain-icon:hover .alive-example__range::before {
+/*.alive-example__curtain-icon:hover .alive-example__range::before {
   position: absolute;
   content: "";
   height: 512px;
   width: 4px;
-  background-color: #68b738;
+  background-color: @green;
   border-radius: 2px;
   z-index: 1;
   left: 50%;
-}
+}*/
 .alive-example__button {
   position: absolute;
   border: none;
@@ -1521,6 +1522,7 @@ img {
   top: 50%;
   transform: translate(calc(-50% + 2px), -50%);
   color: #666666;
+  height: 50px;
 }
 @media (min-width: 768px) {
   .alive-example__button {
