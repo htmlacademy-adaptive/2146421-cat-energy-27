@@ -1,10 +1,9 @@
 .programs-section__wrappers {
-  padding-top: 20px;
   .paddings();
 
   @media (min-width: @tablet-width) {
     .paddings-tablet();
-    padding-top: 530px;
+    padding-top: 489px;
   }
 
   @media (min-width: @desktop-width) {
@@ -36,7 +35,7 @@
   background-color: @light-grey;
 
   &:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 26px;
 
     @media (min-width: @desktop-width) {
       width: 570px;
@@ -53,22 +52,22 @@
     background-repeat: no-repeat;
     left: -60px;
     top: 50%;
-    transform: translateY(-16px);
+    transform: translateY(-12px);
 
     @media (min-width: @tablet-width) {
       width: 140px;
       height: 194px;
       background-image: url("../img/slim-cat-tablet.svg");
       left: 50%;
-      transform: translateX(63px);
+      transform: translate(97px, 22px);
     }
 
     @media (min-width: @desktop-width) {
       width: 70px;
       height: 97px;
       background-image: url("../img/slim-cat-desktop.svg");
-      left: -47px;
-      top: 44px;
+      left: -82px;
+      top: 20px;
     }
   }
 
@@ -79,9 +78,8 @@
     height: 28px;
     background-image: url("../img/panther-icon.svg");
     background-repeat: no-repeat;
-    left: -80px;
+    left: -77px;
     top: 50%;
-    transform: translateY(-5px);
 
     @media (min-width: @tablet-width) {
       width: 268px;
@@ -89,14 +87,15 @@
       background-image: url("../img/panther-tablet.svg");
       left: 50%;
       top: 100%;
+      transform: translate(32px, 22px);
     }
 
     @media (min-width: @desktop-width) {
       width: 134px;
       height: 56px;
       background-image: url("../img/panther-desktop.svg");
-      left: -19px;
-      top: 75px;
+      left: -53px;
+      top: 47px;
     }
   }
 }
@@ -129,8 +128,8 @@
     @media (min-width: @tablet-width) {
       width: 200px;
       height: 200px;
-      transform: translateY(25px);
-      left: calc(50% + 40px);
+      transform: translateY(36px);
+      left: calc(50% + 66px);
     }
 
     @media (min-width: @desktop-width) {
@@ -166,7 +165,7 @@
   margin-left: 20px;
   margin-right: 33px;
   padding-bottom: 23px;
-  padding-top: 30px;
+  padding-top: 29px;
   border-bottom: 1px solid @grey-border;
   white-space: normal;
 
@@ -174,15 +173,14 @@
     width: 340px;
     font-size: 16px;
     line-height: 24px;
-    margin-left: 0;
-    padding-left: 53px;
+    margin-left: 53px;
     padding-top: 24px;
-    padding-bottom: 48px;
+    padding-bottom: 18px;
     border-bottom: none;
   }
 
   @media (min-width: @desktop-width) {
-    width: 451px;
+    width: 457px;
     margin-left: 52px;
     margin-right: 61px;
     padding-left: 0;
@@ -201,35 +199,41 @@
   display: block;
   padding-top: 19px;
   padding-left: 20px;
-  padding-bottom: 22px;
+  padding-bottom: 23px;
   box-sizing: border-box;
   color: @black;
   text-align: left;
   background-color: @light-grey;
+  background-image: url("../img/arrow-icon.svg");
+  background-repeat: no-repeat;
+  background-size: 24px 12px;
+  background-position: 121px 20px;
 
-  &::before {
-    position: absolute;
-    content: "";
-    background: url("../img/arrow-icon.svg") no-repeat;
-    width: 24px;
-    height: 12px;
-    left: 125px;
-    top: 21px;
+  &:active {
+    opacity: 0.3;
+  }
 
-    @media (min-width: @tablet-width) {
-      top: 10px;
-    }
+  &:hover {
+    transition: 0.2s ease-out 0s;
+    background-image: url("../img/arrow-hover.svg");
+    background-size: 32px 12px;
   }
 
   @media (min-width: @tablet-width) {
+    display: inline-block;
+    width: 250px;
     margin-left: 52px;
     padding: 0;
     font-size: 20px;
     line-height: 30px;
-    padding-bottom: 52px;
+    padding-top: 33px;
+    padding-bottom: 59px;
+    background-position: 131px 42px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 59px;
+    padding-bottom: 57px;
+    padding-top: 6px;
+    background-position: 131px 15px;
   }
 }

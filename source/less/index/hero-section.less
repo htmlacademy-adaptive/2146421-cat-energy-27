@@ -27,14 +27,14 @@
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 696px;
+    min-height: 694px;
     background: linear-gradient(to right, transparent 50%, rgb(80, 80, 83) 50%,);
 
     &::before {
       position: absolute;
       content: "";
       width: 50%;
-      height: 696px;
+      height: 694px;
       top: 0;
       left: 50%;
       background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/index-background-desktop-1.jpg");
@@ -85,7 +85,7 @@
     line-height: 20px;
     color: @black;
     padding: 0;
-    margin-left: 117px;
+    margin-left: 119px;
     width: 283px;
   }
 
@@ -94,13 +94,14 @@
     text-align: start;
     width: 414px;
     margin: 0;
-    padding-bottom: 52px;
+    padding-bottom: 56px;
     padding-left: 0;
   }
 }
 
 .hero-section__header {
   position: relative;
+  width: 294px;
   margin: 0;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -113,11 +114,11 @@
   color: @white;
 
   @media (min-width: @tablet-width) {
-    width: 414px;
-    padding-top: 52px;
+    width: 418px;
+    padding-top: 42px;
     padding-bottom: 41px;
-    font-size: 56px;
-    line-height: 56px;
+    font-size: 60px;
+    line-height: 60px;
     color: @black;
     text-align: left;
     margin-left: 117px;
@@ -126,6 +127,7 @@
   @media (min-width: @desktop-width) {
     margin: 0;
     padding-top: 223px;
+    padding-bottom: 40px;
     padding-left: 0;
   }
 }
@@ -139,10 +141,18 @@
   line-height: 18px;
   padding-top: 11px;
   padding-bottom: 11px;
-  margin-top: 490px;
+  margin-top: 440px;
   background-color: @green;
   width: 280px;
   color: @white;
+
+  &:hover {
+    background-color: rgb(95, 172, 47);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 
   @media (min-width: @tablet-width) {
     box-sizing: border-box;
@@ -151,34 +161,34 @@
     width: 244px;
     font-size: 20px;
     line-height: 20px;
-    padding: 14px 26px;
-    bottom: -94px;
-    left: 116px;
+    padding: 17px 24px;
+    bottom: -102px;
+    left: 120px;
   }
 
   @media (min-width: @desktop-width) {
     bottom: -50px;
     left: 50%;
-    transform: translateX(-532px);
+    transform: translateX(-530px);
   }
 }
 
 .hero-section__image {
   z-index: 2;
   position: absolute;
-  top: 210px;
+  top: 167px;
   left: 50%;
   transform: translateX(-50%);
 
   @media (min-width: @tablet-width) {
     box-sizing: border-box;
-    top: 20px;
+    top: 17px;
   }
 
   @media (min-width: @desktop-width) {
-    top: -316px;
+    top: -319px;
     left: 50%;
-    transform: translateX(-30%);
+    transform: translateX(calc(-30% + 4px));
   }
 }
 
