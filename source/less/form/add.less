@@ -3,11 +3,11 @@
 }
 
 .add__list {
-  padding: 0;
   margin: 0;
-  list-style-type: none;
   margin-bottom: 33px;
+  padding: 0;
   padding-top: 1px;
+  list-style-type: none;
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -47,8 +47,8 @@
 .add__control {
   position: relative;
   display: block;
-  padding-left: 46px;
   padding-top: 10px;
+  padding-left: 46px;
 
   @media (min-width: @tablet-width) {
     padding-left: 59px;
@@ -56,12 +56,12 @@
 }
 
 .add__mark {
-  box-sizing: border-box;
   position: absolute;
   top: 2px;
   left: 0;
   width: 30px;
   height: 30px;
+  box-sizing: border-box;
   border: 2px solid @middle-grey;
 
   @media (min-width: @tablet-width) {
@@ -84,19 +84,19 @@
 
 .add__input:checked + .add__mark::before {
   position: absolute;
-  background-image: url("../img/checked.svg");
-  background-repeat: no-repeat;
+  top: 9px;
+  left: 5px;
   width: 18px;
   height: 16px;
   content: "";
-  top: 9px;
-  left: 5px;
+  background-image: url("../img/checked.svg");
+  background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
-    background-image: url("../img/checked-tablet.svg");
+    top: 12px;
+    left: 7px;
     width: 25px;
     height: 21px;
-    left: 7px;
-    top: 12px;
+    background-image: url("../img/checked-tablet.svg");
   }
 }

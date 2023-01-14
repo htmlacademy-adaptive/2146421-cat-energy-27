@@ -22,9 +22,9 @@
 }
 
 .contact-information__wrapper {
-  padding: 24px 20px;
   display: flex;
   justify-content: space-between;
+  padding: 24px 20px;
 
   @media (min-width: @tablet-width) {
     padding: 60px 70px 63px 70px;
@@ -32,25 +32,25 @@
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    z-index: 2;
-    width: 565px;
-    box-sizing: border-box;
-    background-color: @white;
     top: 10px;
     left: 10px;
+    z-index: 2;
+    box-sizing: border-box;
+    width: 565px;
     padding-left: 80px;
     padding-right: 80px;
+    background-color: @white;
   }
 }
 
 .contact-information__slogan {
-  margin: 0;
   width: 139px;
+  margin: 0;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
-  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  font-weight: 400;
   text-transform: uppercase;
   color: rgba(17, 17, 17, 1);
 
@@ -58,26 +58,25 @@
     width: 171px;
     font-size: 20px;
     line-height: 26px;
-    margin: 0;
   }
 }
 
 .contact-information__address {
   margin: 0;
+  margin-left: 19px;
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+  font-weight: 400;
   color: #444444;
-  margin-left: 19px;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 160px;
     font-size: 16px;
     line-height: 20px;
-    width: 160px;
     text-align: end;
   }
 }
@@ -85,13 +84,13 @@
 
 .contact-information__pin {
   position: absolute;
-  bottom: 175px;
   right: 130px;
+  bottom: 175px;
 }
 
 .contact-information iframe {
-  width: 100%;
   display: block;
+  width: 100%;
   border: none;
 
   @media (max-width: @mobile-width-only) {

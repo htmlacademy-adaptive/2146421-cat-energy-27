@@ -1,22 +1,22 @@
 .catalog__list {
   margin: 0;
   padding: 0;
-  list-style-type: none;
   .paddings();
+  list-style-type: none;
 
   @media (min-width: @tablet-width) {
-    .paddings-tablet();
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
     column-gap: 60px;
     row-gap: 141px;
+    .paddings-tablet();
   }
 
   @media (min-width: @desktop-width) {
-    width: 1220px;
     grid-template-columns: repeat(4, 245px);
     column-gap: 80px;
     row-gap: 143px;
+    width: 1220px;
     margin: 0 auto;
   }
 
@@ -30,28 +30,28 @@
   position: relative;
   display: grid;
   grid-template-columns: 140px 1fr 1fr;
-  padding-bottom: 26px;
   padding-top: 0;
+  padding-bottom: 26px;
 
   @media (max-width: @mobile-width-only) {
     &::before {
       position: absolute;
+      top: 208px;
+      left: -400px;
       content: "";
       width: 1000%;
       height: 1px;
       background-color: @grey-2;
-      top: 208px;
-      left: -400px;
     }
   }
 
   @media (min-width: @tablet-width) {
-    padding: 99px 36px 0 36px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: none;
+    padding: 99px 36px 0 36px;
     background-color: @light-grey;
+    border-bottom: none;
   }
 
   @media (min-width: @desktop-width) {
@@ -64,31 +64,31 @@
   margin: 0;
 
   @media (min-width: @tablet-width) {
+    width: 174px;
+    margin-top: 60px;
+    margin-bottom: 12px;
+    padding-right: 10px;
+    padding-left: 10px;
     box-sizing: border-box;
     font-size: 20px;
     line-height: 24px;
-    width: 174px;
-    padding-left: 10px;
-    padding-right: 10px;
     text-align: center;
-    margin-top: 60px;
-    margin-bottom: 12px;
   }
 }
 
 .catalog__title-link {
   grid-column: 2 / 4;
-  text-decoration: none;
+  padding-top: 19px;
+  padding-right: 64px;
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   align-items: center;
+  text-decoration: none;
   text-transform: uppercase;
   color: @black;
-  padding-right: 64px;
-  padding-top: 19px;
 
   @media (min-width: @tablet-width) {
     padding: 0;
@@ -134,16 +134,14 @@
 }
 
 .catalog__button {
-  grid-column: 1 / -1;
-  align-items: center;
+  display: block;
+  margin-top: 22px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: @green;
-  color: @white;
   font-size: 16px;
   line-height: 20px;
-  margin-top: 22px;
-  display: block;
+  color: @white;
+  background-color: @green;
 
   &:hover {
     background-color: rgb(95, 172, 47);
@@ -154,9 +152,9 @@
   }
 
   @media (min-width: @tablet-width) {
+    width: 250px;
     margin-top: 33px;
     margin-bottom: 39px;
-    width: 250px;
   }
 
   @media (min-width: @desktop-width) {

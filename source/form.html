@@ -59,11 +59,11 @@
             <legend class="visually-hidden">Данные котечки.</legend>
             <div class="form__input-design">
               <label class="form__label" for="form__name"> Имя:*</label>
-              <input class="form__input form__input--input-name" id="form__name" type="text" name="name" placeholder="барсик">
+              <input class="form__input form__input--input-name" id="form__name" type="text" name="name" placeholder="барсик" required>
             </div>
             <div class="form__input-design">
               <label class="form__label" for="form__weight"> Вес (кг):*</label>
-              <input class="form__input form__input--input-weight" id="form__weight" type="number" name="weight" max="30" placeholder="7">
+              <input class="form__input form__input--input-weight" id="form__weight" type="number" name="weight" max="30" placeholder="7" required>
             </div>
             <div class="form__input-design">
               <label class="form__label" for="form__age"> Возраст (лет):</label>
@@ -104,14 +104,14 @@
           <div class="owner-contacts__wrapper-desktop">
             <div class="owner-contacts__wrapper">
               <label class="owner-contacts__label" for="owner-contacts__email"> E-mail:*</label>
-              <input class="form__input form__input--input-email" id="owner-contacts__email" type="email" name="email" placeholder="kuklachev@gmail.com">
+              <input class="form__input form__input--input-email" id="owner-contacts__email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
               <svg class="form__input-icon" width="27" height="17">
                 <use xlink:href="img/sprite.svg#email-icon"></use>
               </svg>
             </div>
             <div class="owner-contacts__wrapper">
               <label class="owner-contacts__label" for="owner-contacts__tel"> Телефон:* </label>
-              <input class="form__input form__input--input-phone" id="owner-contacts__tel" type="tel" name="phone" placeholder="8 (960) 900-60-90">
+              <input class="form__input form__input--input-phone" id="owner-contacts__tel" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
               <svg class="form__input-icon" width="27" height="17">
                 <use xlink:href="img/sprite.svg#phone-icon"></use>
               </svg>
@@ -225,7 +225,7 @@
             <use xlink:href="img/sprite.svg#html-academy-text"></use>
           </svg>
 
-          <svg class="social__link-icon" width="27" height="34">
+          <svg class="main-footer__link-icon" width="27" height="34">
             <use xlink:href="img/sprite.svg#html-academy-logo"></use>
           </svg>
           <span class="visually-hidden">Логотип html academy.</span>

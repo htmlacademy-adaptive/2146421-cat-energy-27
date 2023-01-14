@@ -1,7 +1,7 @@
 .alive-example__wrapper {
   padding: 21px 20px;
-  background-color: @grey;
   padding-bottom: 0;
+  background-color: @grey;
 
   @media (min-width: @tablet-width) {
     padding: 39px 30px 246px;
@@ -35,8 +35,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0 auto;
     min-height: 596px;
+    margin: 0 auto;
   }
 }
 
@@ -44,9 +44,9 @@
   margin: 0;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
-  font-weight: 400;
   font-size: 36px;
   line-height: 40px;
+  font-weight: 400;
   text-align: start;
   color: @black;
 
@@ -58,20 +58,20 @@
   @media (min-width: @desktop-width) {
     width: 1220px;
     margin: 0 auto;
-    margin-bottom: 76px;
     margin-top: 43px;
+    margin-bottom: 76px;
   }
 }
 
 .alive-example__text {
   margin: 0;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  color: @dark-grey;
   padding-top: 40px;
   padding-bottom: 20px;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: @dark-grey;
 
   @media (min-width: @tablet-width) {
     padding-top: 63px;
@@ -81,8 +81,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    .paddings-desktop();
     width: 432px;
+    .paddings-desktop();
     padding-top: 69px;
     padding-bottom: 67px;
   }
@@ -95,8 +95,8 @@
 
   @media (min-width: @tablet-width) {
     justify-content: flex-start;
-    margin-bottom: 0;
     min-height: 72px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -107,11 +107,11 @@
 .alive-example__weight,
 .alive-example__period {
   position: relative;
-  min-height: 56px;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 124px;
+  min-height: 56px;
   border: 1px solid @middle-grey;
   border-radius: 3px;
 
@@ -127,13 +127,13 @@
 }
 
 .alive-example__count {
-  text-align: center;
   padding-top: 14px;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
-  font-weight: 400;
   font-size: 24px;
   line-height: 24px;
+  font-weight: 400;
+  text-align: center;
   color: @black;
 
   @media (min-width: @tablet-width) {
@@ -145,46 +145,46 @@
 
 .alive-example__count-title {
   position: absolute;
+  top: 38px;
+  width: 77px;
+  margin: 0;
+  margin-top: 8px;
   font-size: 12px;
   line-height: 12px;
-  top: 38px;
-  margin: 0;
   text-transform: lowercase;
-  margin-top: 8px;
   text-align: center;
-  width: 77px;
   background-color: @grey;
 
   @media (min-width: @tablet-width) {
+    top: 56px;
     display: inline-block;
+    width: auto;
+    min-height: 77px;
+    padding-right: 8px;
+    padding-left: 8px;
     font-size: 14px;
     line-height: 14px;
-    width: auto;
-    padding-left: 8px;
-    padding-right: 8px;
-    min-height: 77px;
-    top: 56px;
     white-space: nowrap;
     background-color: @white;
   }
 
   @media (min-width: @desktop-width) {
-    line-height: 14px;
-    margin-top: 9px;
-    background-color: @grey;
     min-height: 27px;
+    margin-top: 9px;
+    line-height: 14px;
+    background-color: @grey;
   }
 }
 
 .alive-example__price {
+  margin: 0;
+  margin-top: 34px;
+  margin-bottom: 20px;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  margin: 0;
-  margin-bottom: 20px;
-  margin-top: 34px;
+  font-weight: 400;
   text-align: center;
   text-transform: uppercase;
   color: @black;
@@ -192,19 +192,19 @@
   @media (min-width: @tablet-width) {
     display: inline-block;
     width: 174px;
+    margin-top: 19px;
+    margin-bottom: 15px;
     font-size: 20px;
     line-height: 30px;
     text-align: right;
-    margin-top: 19px;
-    margin-bottom: 15px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 366px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 69px;
+    width: 366px;
     margin-top: -2px;
+    margin-bottom: 69px;
   }
 }
 
@@ -222,11 +222,11 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    background-color: transparent;
-    z-index: 4;
+    bottom: 400px;
     left: 50%;
     transform: translateX(-100%);
-    bottom: 400px;
+    z-index: 4;
+    background-color: transparent;
   }
 
   @media (min-width: @desktop-width) {
@@ -236,26 +236,26 @@
 
 .alive-example__scale {
   position: absolute;
+  top: 7px;
+  left: 50%;
+  z-index: 1;
   content: "";
-  height: 256px;
   width: 4px;
+  height: 256px;
   background-color: @strip-grey;
   border-radius: 2px;
-  z-index: 1;
-  left: 50%;
-  top: 7px;
 
   @media (min-width: @tablet-width) {
-    height: 512px;
-    left: 100%;
     top: 46px;
+    left: 100%;
+    height: 512px;
   }
 }
 
 .alive-example__button:hover + .alive-example__scale,
 .alive-example__button:focus + .alive-example__scale {
-  transition: 0.2s ease-out 0s;
   background-color: #68b738;
+  transition: 0.2s ease-out 0s;
 }
 
 .alive-example__button:active + .alive-example__scale {
@@ -264,8 +264,8 @@
 
 .alive-example__button:hover > .alive-example__curtain-icon,
 .alive-example__button:focus > .alive-example__curtain-icon {
-  transition: 0.2s ease-out 0s;
   color: #68b738;
+  transition: 0.2s ease-out 0s;
 }
 
 .alive-example__button:active > .alive-example__curtain-icon {
@@ -287,35 +287,24 @@
 }
 
 .alive-example__curtain-icon {
-  color: @strip-grey;
   height: 50px;
+  color: @strip-grey;
 }
-
-/*.alive-example__curtain-icon:hover .alive-example__range::before {
-  position: absolute;
-  content: "";
-  height: 512px;
-  width: 4px;
-  background-color: @green;
-  border-radius: 2px;
-  z-index: 1;
-  left: 50%;
-}*/
 
 .alive-example__button {
   position: absolute;
-  border: none;
-  background-color: transparent;
-  z-index: 2;
-  left: 50%;
   top: 50%;
+  left: 50%;
   transform: translate(calc(-50% + 2px), -50%);
-  color: @strip-grey;
+  z-index: 2;
   height: 50px;
+  color: @strip-grey;
+  background-color: transparent;
+  border: none;
 
   @media (min-width: @tablet-width) {
-    left: 100%;
     top: calc(100% + 45px);
+    left: 100%;
   }
 }
 
@@ -342,14 +331,14 @@
   @media (min-width: @tablet-width) {
     min-width: 768px;
     height: 460px;
-    background-color: @grey;
     padding-left: 0;
+    background-color: @grey;
   }
 
   @media (min-width: @desktop-width) {
-    background-color: transparent;
     width: 0;
     height: 0;
+    background-color: transparent;
   }
 }
 
