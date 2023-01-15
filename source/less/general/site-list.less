@@ -87,7 +87,9 @@
 }
 
 .site-list__link--current {
-  border-bottom: 2px solid @green;
+  @media (min-width: @tablet-width) {
+    border-bottom: 2px solid @green;
+  }
 }
 
 .site-list__link--current-index-desktop {
