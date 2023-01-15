@@ -17,9 +17,9 @@
   margin-top: 78px;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
-  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  font-weight: 400;
   text-align: center;
   text-transform: uppercase;
   color: @black;
@@ -27,12 +27,12 @@
   &::before,
   &::after {
     position: absolute;
+    top: -39px;
+    left: 86px;
     content: "";
     width: 30px;
     height: 2px;
     background-color: @grey-3;
-    top: -39px;
-    left: 86px;
   }
 
   &::after {
@@ -48,9 +48,9 @@
 
     &::before,
     &::after {
-      width: 60px;
       top: -66px;
       left: 37px;
+      width: 60px;
     }
 
     &::after {
@@ -69,34 +69,34 @@
 .add-more__text {
   margin: 0;
   margin-top: 8px;
-  text-align: center;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
+  text-align: center;
   color: @dark-grey;
 
   @media (min-width: @tablet-width) {
     width: 165px;
-    font-size: 16px;
-    line-height: 18px;
     margin: 0 auto;
     margin-top: 23px;
+    font-size: 16px;
+    line-height: 18px;
   }
 }
 
 .add-more__button {
   display: block;
-  font-size: 16px;
-  line-height: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: @light-grey;
-  color: @dark-grey;
   width: 280px;
   margin: 0 auto;
   margin-top: 21px;
   margin-bottom: 34px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  color: @dark-grey;
+  background-color: @light-grey;
 
   @media (min-width: @tablet-width) {
     width: 252px;

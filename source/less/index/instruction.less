@@ -15,16 +15,16 @@
   margin: 0;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
-  font-weight: 400;
   font-size: 36px;
   line-height: 40px;
+  font-weight: 400;
   color: @black;
 
   @media (min-width: @tablet-width) {
-    font-size: 60px;
-    line-height: 60px;
     padding-top: 25px;
     padding-left: 0;
+    font-size: 60px;
+    line-height: 60px;
   }
 
   @media (min-width: @desktop-width) {
@@ -36,28 +36,28 @@
 
 .instruction__list {
   margin: 0;
+  margin-top: 41px;
   padding: 0;
   list-style-type: none;
-  margin-top: 41px;
   counter-reset: section;
 
   @media (min-width: @tablet-width) and (max-width: 1439px) {
-    width: 703px;
-    min-height: 597px;
     display: grid;
     grid-template-columns: 246px 246px;
     column-gap: 137px;
     row-gap: 41px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 703px;
+    min-height: 597px;
     margin-top: 39px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 280px;
-    width: 1220px;
     display: flex;
     justify-content: space-between;
+    width: 1220px;
+    min-height: 280px;
     margin: 0 auto;
     margin-top: 32px;
   }
@@ -78,17 +78,17 @@
   &::after {
     @media (min-width: @tablet-width) {
       position: absolute;
-      counter-increment: section;
-      content: counters(section, ".", decimal) " ";
-      color: @light-grey;
-      font-family: "Oswald", "Arial", sans-serif;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 280px;
-      line-height: 280px;
       top: -4px;
       left: calc(50% - 11px);
       z-index: 0;
+      counter-increment: section;
+      content: counters(section, ".", decimal) " ";
+      font-family: "Oswald", "Arial", sans-serif;
+      font-style: normal;
+      font-size: 280px;
+      line-height: 280px;
+      font-weight: 400;
+      color: @light-grey;
     }
 
     @media (min-width: @desktop-width) {
@@ -99,12 +99,12 @@
 
   &::before {
     position: absolute;
+    top: 0;
+    left: 0;
     content: "";
     width: 60px;
     height: 60px;
     background-color: @green;
-    left: 0;
-    top: 0;
     background-repeat: no-repeat;
     background-position: center;
 
@@ -148,21 +148,21 @@
   width: 196px;
   margin: 0;
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
+  font-weight: 400;
   color: @dark-grey;
 
   @media (min-width: @tablet-width) {
     position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
     width: 250px;
     height: 100px;
     padding: 146px 25px 191px 0;
     font-size: 16px;
     line-height: 24px;
-    top: 0;
-    left: 0;
-    z-index: 10;
   }
 
   @media (min-width: @desktop-width) {

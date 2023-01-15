@@ -6,8 +6,8 @@
 
 .gift__wrapper {
   margin-right: 20px;
-  margin-left: 20px;
   margin-bottom: 35px;
+  margin-left: 20px;
   background-color: rgb(79, 79, 82);
   background-image: url("../img/cat-catalog-mobile.jpg");
   background-repeat: no-repeat;
@@ -20,61 +20,61 @@
   }
 
   @media (min-width: @desktop-width) {
-    background-image: url("../img/cat-catalog-desktop.jpg");
     width: 245px;
     margin-left: 0;
+    background-image: url("../img/cat-catalog-desktop.jpg");
   }
 }
 
 .gift__text {
-  box-sizing: border-box;
   position: relative;
   margin: 0;
   margin-top: 35px;
   padding: 187px 61px 43px 58px;
-  background-color: @green;
-  opacity: 0.85;
-  color: @white;
+  box-sizing: border-box;
   text-align: center;
   font-style: normal;
-  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  font-weight: 400;
+  color: @white;
+  background-color: @green;
+  opacity: 0.85;
 
   &::before {
     position: absolute;
-    content: "";
-    width: 80px;
-    height: 82px;
-    background: url("../img/icon-gift.svg") no-repeat;
+    top: 56px;
     left: 50%;
     transform: translateX(-50%);
-    top: 56px;
+    width: 80px;
+    height: 82px;
+    content: "";
+    background: url("../img/icon-gift.svg") no-repeat;
 
     @media (min-width: @tablet-width) {
-      left: 17%;
       top: 28%;
+      left: 17%;
     }
 
     @media (min-width: @desktop-width) {
-      left: 50%;
       top: 56px;
+      left: 50%;
     }
   }
 
   @media (min-width: @tablet-width) {
     min-height: 200px;
-    padding: 71px 124px 69px 422px;
     margin: 0;
+    padding: 71px 124px 69px 422px;
     text-align: start;
   }
 
   @media (min-width: @desktop-width) {
-    box-sizing: content-box;
-    min-height: 62px;
     width: 161px;
+    min-height: 62px;
     margin-top: 191px;
     padding: 184px 43px 45px 41px;
+    box-sizing: content-box;
     text-align: center;
   }
 }
