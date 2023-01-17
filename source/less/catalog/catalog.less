@@ -30,6 +30,7 @@
   position: relative;
   display: grid;
   grid-template-columns: 140px 1fr 1fr;
+  min-height: 183px;
   padding-top: 0;
   padding-bottom: 26px;
 
@@ -106,17 +107,33 @@
 
 .catalog__image {
   display: block;
-  margin: 0 auto;
-  align-content: end;
+  position: absolute;
 
-  @media (min-width: @tablet-width) {
-    position: absolute;
+  @media (max-width: @mobile-width-only) {
+    left: 27px;
+
+    &:nth-child(odd) {
+      top: 31px;
+    }
+
+    &:nth-child(even) {
+      bottom: 94px;
+      left: 34px;
+    }
+  }
+
+
+  @media (min-width: @mobile-width-only) {
     top: -48px;
     left: 50%;
     transform: translateX(-50%);
 
     &:nth-child(odd) {
       top: -73px;
+    }
+
+    &:nth-child(even) {
+      top: -46px;
     }
   }
 
@@ -135,6 +152,7 @@
 
 .catalog__button {
   display: block;
+  grid-column: 1 / 4;
   margin-top: 22px;
   padding-top: 10px;
   padding-bottom: 10px;

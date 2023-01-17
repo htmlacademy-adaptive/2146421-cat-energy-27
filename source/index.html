@@ -10,6 +10,14 @@
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="css/style.min.css" as="style">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldmedium.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="img/index-background-desktop-2@2x.jpg" as="image">
 </head>
 
 <body class="page__body">
@@ -22,7 +30,7 @@
       </picture>
       <img class="logo__cat-energy" src="img/cat-energy-logo.svg" width="101" height="18" alt="Cat-energy.">
     </a>
-    <nav class="main-nav main-nav--closed main-nav--nojs">
+    <nav class="main-nav main-nav--opened main-nav--nojs">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню.</span>
       </button>
@@ -107,7 +115,7 @@
           </li>
 
           <li class="instruction__item instruction__item--period">
-            <p class="instruction__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbspпитомца!</p>
+            <p class="instruction__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!</p>
           </li>
         </ul>
       </div>
@@ -149,12 +157,18 @@
         <div class="alive-example__scale"></div>
         <div class="alive-example__images">
           <picture>
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-before-tablet.webp, img/cat-before-tablet@2x.webp 2x" width="560" height="512">
+            <source type="image/webp" srcset="img/cat-before-mobile.webp, img/cat-before-mobile@2x.webp 2x" width="280" height="256">
+
             <source media="(min-width: 768px)" srcset="img/cat-before-tablet.png, img/cat-before-tablet@2x.png 2x" width="560" height="512">
-            <img class="alive-example__image-fat" src="img/cat-before.png" srcset="img/cat-before@2x.png" width="280" height="256" alt="Полная кошка.">
+            <img class="alive-example__image-fat" src="img/cat-before-mobile.png" srcset="img/cat-before-mobile@2x.png" width="280" height="256" alt="Полная кошка.">
           </picture>
           <picture>
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-after-tablet.webp, img/cat-after-tablet@2x.webp 2x" width="560" height="512">
+            <source type="image/webp" srcset="img/cat-after-mobile.webp, img/cat-after-mobile@2x.webp 2x" width="280" height="256">
+
             <source media="(min-width: 768px)" srcset="img/cat-after-tablet.png, img/cat-after-tablet@2x.png 2x" width="560" height="512">
-            <img class="alive-example__image-slim" src="img/cat-after.png" srcset="img/cat-after@2x.png" width="280" height="256" alt="Худая кошка.">
+            <img class="alive-example__image-slim" src="img/cat-after-mobile.png" srcset="img/cat-after-mobile@2x.png" width="280" height="256" alt="Худая кошка.">
           </picture>
         </div>
       </div>
@@ -163,7 +177,7 @@
     <section class="contact-information">
       <div class="contact-information__wrapper">
         <h2 class="visually-hidden">Контактная информация.</h2>
-        <p class="contact-information__slogan">Приглашаем к&nbspсотрудничеству дилеров!</p>
+        <p class="contact-information__slogan">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
         <div class="contact-information__address">
           <span>Ул. Большая Конюшенная, д. 19/8</span>
           <span>Санкт-Петербург</span>

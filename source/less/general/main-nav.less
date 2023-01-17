@@ -25,6 +25,17 @@
   }
 }
 
+.main-nav--opened .main-nav__wrapper {
+  @media (max-width: @mobile-width-only) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    background-color: @white;
+  }
+}
+
 
 .main-nav--opened .main-nav__toggle {
   &::before,
@@ -47,9 +58,9 @@
   }
 }
 
-.main-nav--opened .main-container__hero-wrapper {
+/*.main-nav--opened .main-container__hero-wrapper {
   padding-top: 201px;
-}
+}*/
 
 .main-nav--nojs .main-nav__wrapper {
   position: static;
