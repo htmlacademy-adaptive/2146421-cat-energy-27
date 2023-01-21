@@ -25,6 +25,7 @@
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 1220px;
     margin: 0 auto;
     margin-top: 80px;
@@ -43,8 +44,12 @@
 
     @media (min-width: @desktop-width) {
       width: 570px;
-      margin-bottom: 0;
+      margin-bottom: 20px;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 20px;
   }
 
   &:first-child .programs-section__header::after {
@@ -78,6 +83,7 @@
   &:last-child .programs-section__header::after {
     position: absolute;
     top: 50%;
+    transform: translateY(1px);
     left: -77px;
     content: "";
     width: 67px;
@@ -121,8 +127,8 @@
   &::before {
     position: absolute;
     top: 50%;
-    transform: translateY(-13px);
-    left: -70px;
+    transform: translateY(-9px);
+    left: -68px;
     content: "";
     width: 50px;
     height: 50px;

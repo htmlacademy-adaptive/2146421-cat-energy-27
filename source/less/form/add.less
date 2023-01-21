@@ -17,7 +17,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(4, 305px);
+    grid-template-columns: 325px 325px 325px 245px;
     gap: 0;
   }
 }
@@ -33,6 +33,7 @@
   }
 
   @media (min-width: @tablet-width) {
+    padding-top: 17px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -68,9 +69,17 @@
     width: 40px;
     height: 40px;
   }
+
+  @media (min-width: @desktop-width) {
+    top: 6px;
+  }
 }
 
-.add__control:hover .add__mark {
+.add__input:focus-visible + .add__mark {
+  border-color: @dark-grey;
+}
+
+.add__input:hover + .add__mark {
   border-color: rgba(186, 186, 186, 1);
 }
 
@@ -84,7 +93,7 @@
 
 .add__input:checked + .add__mark::before {
   position: absolute;
-  top: 9px;
+  top: 6px;
   left: 5px;
   width: 18px;
   height: 16px;

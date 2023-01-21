@@ -28,7 +28,7 @@
 
   @media (min-width: @desktop-width) {
     min-height: 694px;
-    background: linear-gradient(to right, transparent 50%, rgb(80, 80, 83) 50%,);
+    background: linear-gradient(to bottom, rgb(80, 80, 83), rgb(80, 80, 83)) no-repeat top right / 50% 694px;
 
     &::before {
       position: absolute;
@@ -186,9 +186,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    top: -319px;
     left: 50%;
-    transform: translateX(calc(-30% + 4px));
+    transform: translate(calc(-30% + 4px), -67%);
   }
 }
 

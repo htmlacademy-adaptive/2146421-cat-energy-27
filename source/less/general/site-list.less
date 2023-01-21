@@ -6,6 +6,7 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 440px;
   }
@@ -26,6 +27,7 @@
   line-height: 20px;
   font-weight: 500;
   padding-top: 22px;
+  padding-right: 10px;
   padding-bottom: 24px;
   text-transform: uppercase;
   border-bottom: 1px solid #e6e6e6;
@@ -35,6 +37,7 @@
   }
 
   &:last-child {
+    padding-right: 0;
     border-bottom: none;
   }
 
@@ -62,7 +65,7 @@
 }
 
 .site-list__link {
-  padding-bottom: 8px;
+  padding-bottom: 5px;
   text-decoration: none;
   color: @black;
 
@@ -76,6 +79,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    padding-bottom: 8px;
     color: @white;
   }
 
