@@ -17,16 +17,20 @@
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    top: 40px;
     left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
+    transform: translateX(-50%);
+    z-index: 4;
+    align-items: flex-start;
     box-sizing: border-box;
     width: 1440px;
     margin-right: -50%;
-    padding-top: 103px;
+    padding-top: 51px;
     .paddings-desktop();
   }
+}
+
+.main-header--design {
+  position: relative;
 }
 
 .main-header__logo {
