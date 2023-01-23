@@ -3,7 +3,6 @@
 
   @media (min-width: @tablet-width) {
     .paddings-tablet();
-    padding-top: 489px;
   }
 
   @media (min-width: @desktop-width) {
@@ -19,12 +18,13 @@
   list-style-type: none;
 
   @media (min-width: @tablet-width) {
-    margin-top: 140px;
+    margin-top: -39px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 1220px;
     margin: 0 auto;
     margin-top: 80px;
@@ -38,13 +38,17 @@
     margin-bottom: 19px;
 
     @media (min-width: @tablet-width) {
-      margin-bottom: 26px;
+      margin-bottom: 29px;
     }
 
     @media (min-width: @desktop-width) {
       width: 570px;
-      margin-bottom: 0;
+      margin-bottom: 20px;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 20px;
   }
 
   &:first-child .programs-section__header::after {
@@ -60,7 +64,7 @@
 
     @media (min-width: @tablet-width) {
       left: 50%;
-      transform: translate(97px, 22px);
+      transform: translate(96px, 25px);
       width: 140px;
       height: 194px;
       background-image: url("../img/slim-cat-tablet.svg");
@@ -78,6 +82,7 @@
   &:last-child .programs-section__header::after {
     position: absolute;
     top: 50%;
+    transform: translateY(1px);
     left: -77px;
     content: "";
     width: 67px;
@@ -121,8 +126,8 @@
   &::before {
     position: absolute;
     top: 50%;
-    transform: translateY(-13px);
-    left: -70px;
+    transform: translateY(-9px);
+    left: -68px;
     content: "";
     width: 50px;
     height: 50px;
@@ -146,7 +151,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-left: 53px;
+    margin-left: 54px;
     padding-top: 77px;
     font-size: 36px;
     line-height: 36px;
@@ -226,10 +231,8 @@
   @media (min-width: @tablet-width) {
     display: inline-block;
     width: 250px;
-    margin-left: 52px;
-    padding: 0;
-    padding-top: 33px;
-    padding-bottom: 59px;
+    margin-left: 53px;
+    padding: 34px 0 59px;
     font-size: 20px;
     line-height: 30px;
     background-position: 131px 42px;

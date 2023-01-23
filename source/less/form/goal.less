@@ -41,9 +41,9 @@
 
   @media (min-width: @tablet-width) {
     box-sizing: border-box;
-    padding-top: 9px;
+    padding-top: 5px;
     padding-bottom: 27px;
-    margin-top: 47px;
+    margin-top: 53px;
     margin-bottom: 46px;
     padding-left: 30px;
     border: 1px solid #eaeaea;
@@ -84,7 +84,7 @@
 
 .goal__mark {
   position: absolute;
-  top: 2px;
+  top: 4px;
   left: 0;
   width: 30px;
   height: 30px;
@@ -98,12 +98,16 @@
   }
 }
 
-.goal__control:hover .goal__mark {
+.goal__input:hover + .goal__mark {
   border: 2px solid rgba(186, 186, 186, 1);
 }
 
 .goal__input:disabled + .goal__mark {
   opacity: 0.3;
+}
+
+.goal__input:focus-visible + .goal__mark {
+  border: 2px solid @dark-grey;
 }
 
 .goal__input:disabled ~ .goal__label {

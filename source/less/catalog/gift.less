@@ -14,15 +14,27 @@
   background-size: contain;
   background-position: top;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/cat-catalog-mobile@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     margin: 69px 30px 76px 30px;
     background-image: url("../img/cat-catalog-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/cat-catalog-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 245px;
     margin-left: 0;
     background-image: url("../img/cat-catalog-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/cat-catalog-desktop@2x.jpg");
+    }
   }
 }
 
