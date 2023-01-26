@@ -108,13 +108,16 @@
   color: #444444;
   border: 1px solid #e7e7e7;
 
-  &:focus,
   &:hover {
-    border: 1px solid @black;
+    border: 1px solid @middle-grey;
   }
 
-  &:invalid {
-    border: 1px solid rgba(255, 130, 130, 1);
+  &:focus-visible {
+    outline: 2px solid @dark-grey;
+  }
+
+  &:not(:placeholder-shown):invalid {
+    outline: 2px solid rgba(255, 130, 130, 1);
   }
 
   @media (min-width: @tablet-width) {
@@ -192,6 +195,10 @@
     &:focus + .form__input-icon {
       color: @green;
     }
+
+    &:not(:placeholder-shown):invalid + .form__input-icon {
+      color: rgba(255, 130, 130, 1);
+    }
   }
 
   &--input-email {
@@ -218,6 +225,10 @@
 
     &:focus + .form__input-icon {
       color: @green;
+    }
+
+    &:not(:placeholder-shown):invalid + .form__input-icon {
+      color: rgba(255, 130, 130, 1);
     }
   }
 }
@@ -276,6 +287,14 @@
     margin-top: 40px;
     margin-bottom: 30px;
     padding-bottom: 0;
+  }
+
+  &:hover {
+    border: 1px solid @middle-grey;
+  }
+
+  &:focus-visible {
+    outline: 2px solid @dark-grey;
   }
 }
 
